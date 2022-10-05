@@ -49,22 +49,22 @@ begin
     case TCliente(RadioGroup1.ItemIndex) of
       Residencia:
       begin
-        xConta := ((xValor * 0.60) - xDesconto);
+        xConta := ((xValor * 0.80) - xDesconto);
         showMessage('Sua conta esse mês é de R$ ' + FormatFloat('0.00',xConta));
       end;
       Comercio:
       begin
-        xConta:= ((xValor * 0.48) - xDesconto);
+        xConta:= ((xValor * 0.68) - xDesconto);
         showMessage('Sua conta esse mês é de R$ ' + FormatFloat('0.00',xConta));
       end;
       Industria:
       begin
-        xConta:= ((xValor * 1.29) - xDesconto);
+        xConta:= ((xValor * 1.49) - xDesconto);
         showMessage('Sua conta esse mês é de R$ ' + FormatFloat('0.00',xConta));
       end;
       Fazenda:
       begin
-        xConta := ((xValor * 2.18) - xDesconto);
+        xConta := ((xValor * 3.18) - xDesconto);
         showMessage('Sua conta esse mês é de R$ ' + FormatFloat('0.00',xConta));
       end
       else

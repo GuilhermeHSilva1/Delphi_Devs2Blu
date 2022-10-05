@@ -27,8 +27,6 @@ object Form1: TForm1
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    ExplicitLeft = 29
-    ExplicitTop = 8
     ExplicitWidth = 84
   end
   object Label2: TLabel
