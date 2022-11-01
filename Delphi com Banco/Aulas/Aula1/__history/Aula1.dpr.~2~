@@ -3,7 +3,7 @@ program Aula1;
 uses
   Vcl.Forms,
   Principal in 'Principal.pas' {Form1},
-  udmPedidos in 'udmPedidos.pas' {dmPedidos: TDataModule};
+  udmPedidos in 'udmPedidos.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
@@ -11,6 +11,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TdmPedidos, dmPedidos);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

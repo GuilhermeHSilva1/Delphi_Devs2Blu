@@ -1,0 +1,21 @@
+object dmPedidos: TdmPedidos
+  OldCreateOrder = False
+  Height = 261
+  Width = 366
+  object FDConexao: TFDConnection
+    Params.Strings = (
+      'Database=devs2blu'
+      'User_Name=root'
+      'Password=root'
+      'Server=localhost'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 72
+    Top = 56
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Users\Guilhermehillesheim\Downloads\Biblio\libmysql.dll'
+    Left = 72
+    Top = 128
+  end
+end
