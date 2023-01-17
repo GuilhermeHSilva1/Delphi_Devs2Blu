@@ -1,0 +1,19 @@
+program Exercicio;
+
+uses
+  Vcl.Forms,
+  UfrmPrincipal in 'UfrmPrincipal.pas' {frmPrincipal},
+  UfrmAtores in 'UfrmAtores.pas' {frmAtores},
+  UdmConexao in 'UdmConexao.pas' {dmConexao: TDataModule},
+  UfrmRelCidades in 'UfrmRelCidades.pas' {frmRelCidades},
+  UfrmRelFilmes in 'UfrmRelFilmes.pas' {frmRelFilmes};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

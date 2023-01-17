@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:33:58.000.897,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/12 21:35:30.000.812,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\mysql\Desktop\Exercicio\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/12 21:35:30.000.812,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Desktop\Exercicio\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/12 21:35:36.000.051,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Desktop\Exercicio\Exercicio.dproj</Transaction>
+    <Transaction>2023/01/12 21:35:42.000.129,=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+    <Transaction>2023/01/12 21:35:50.000.849,C:\Users\mysql\Desktop\Exercicio\Unit1.dfm=C:\Users\mysql\Desktop\Exercicio\UfrmAtores.dfm</Transaction>
+    <Transaction>2023/01/12 21:35:50.000.849,C:\Users\mysql\Desktop\Exercicio\Unit1.pas=C:\Users\mysql\Desktop\Exercicio\UfrmAtores.pas</Transaction>
+    <Transaction>2023/01/12 21:39:32.000.481,=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+    <Transaction>2023/01/12 21:39:44.000.149,C:\Users\mysql\Desktop\Exercicio\Unit1.pas=C:\Users\mysql\Desktop\Exercicio\UdmConexao.pas</Transaction>
+    <Transaction>2023/01/12 21:39:44.000.149,C:\Users\mysql\Desktop\Exercicio\Unit1.dfm=C:\Users\mysql\Desktop\Exercicio\UdmConexao.dfm</Transaction>
+    <Transaction>2023/01/13 18:05:05.000.567,=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+    <Transaction>2023/01/13 18:05:19.000.292,C:\Users\mysql\Desktop\Exercicio\UfrmRelCidades.pas=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+    <Transaction>2023/01/13 18:05:19.000.292,C:\Users\mysql\Desktop\Exercicio\UfrmRelCidades.dfm=C:\Users\mysql\Desktop\Exercicio\Unit1.dfm</Transaction>
+    <Transaction>2023/01/13 19:08:33.000.510,=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+    <Transaction>2023/01/13 19:09:19.000.917,C:\Users\mysql\Desktop\Exercicio\UfrmRelFilmes.dfm=C:\Users\mysql\Desktop\Exercicio\Unit1.dfm</Transaction>
+    <Transaction>2023/01/13 19:09:19.000.917,C:\Users\mysql\Desktop\Exercicio\UfrmRelFilmes.pas=C:\Users\mysql\Desktop\Exercicio\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

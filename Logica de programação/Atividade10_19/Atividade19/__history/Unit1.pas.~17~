@@ -1,0 +1,64 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Memo1: TMemo;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    procedure AddNomeESexo;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+procedure TForm1.AddNomeESexo;
+var
+  xSexo: array[1..5] of String;
+  xNomes: array[1..80] of String;
+  I, xHomem, xMulher, xInvalidos: Integer;
+begin
+  xHomem := 0;
+  xMulher:= 0
+  xInvalidos:= 0;
+  for I := 1 to High(xSexo) do
+  begin
+      xNomes[I]:= InputBox('Informe', 'Informe seu Nome:','Guilherme');
+      xSexo[I]:= InputBox('Informe', 'Informe seu Sexo(H/F):','H');
+      Memo1.Lines.Add(xNomes[I] + ' / ' + xSexo[I]);
+
+      if (xNomes[I] = 'H') or (xNomes[I] = 'h') then
+        xHomem := xHomem + 1
+      else if (xNomes[I] = 'F') or (xNomes[I] = 'f') then
+        xMulher := xMulher + 1
+      else
+        xInvalidos:= xInvalidos + 1;
+  end;
+  label1.Caption:= 'Total de Homens: ' + IntToStr(xHomem);
+  label2.Caption:= 'Total de Mulheres: ' + IntToStr(xMulher);
+  label2.Caption:= 'Sexos Invalidos: ' + IntToStr(xInvalidos);
+end;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  AddNomeESexo;
+end;
+
+end.

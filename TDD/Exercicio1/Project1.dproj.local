@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/16 18:29:42.000.013,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:30:37.000.040,C:\Users\mysql\Desktop\TDD\Exercicio1\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:30:37.000.040,C:\Users\mysql\Desktop\TDD\Exercicio1\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/16 18:30:38.000.960,C:\Users\mysql\Desktop\TDD\Exercicio1\Project1.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/16 18:30:42.000.736,=C:\Users\mysql\Desktop\TDD\Exercicio1\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:31:38.000.568,C:\Users\mysql\Desktop\TDD\Exercicio1\UUCalculadora.pas=C:\Users\mysql\Desktop\TDD\Exercicio1\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

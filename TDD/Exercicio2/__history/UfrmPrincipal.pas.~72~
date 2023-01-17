@@ -1,0 +1,108 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UProdutos;
+
+type
+  TfrmPrincipal = class(TForm)
+    btnCriarProduto: TButton;
+    edtQuantidade: TEdit;
+    btnComprar: TButton;
+    btnVerDesconto: TButton;
+    label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure btnCriarProdutoClick(Sender: TObject);
+    procedure btnVerDescontoClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnComprarClick(Sender: TObject);
+  private
+    { Private declarations }
+    FProduto : TProduto;
+    procedure AtivarTela;
+    procedure AtualizarTela;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.AtivarTela;
+begin
+  btnComprar.Visible := True;
+  btnVerDesconto.Visible := True;
+  btnCriarProduto.Visible := False;
+  edtQuantidade.Visible := True;
+  label1.Visible := True;
+  label2.Visible := True;
+  label3.Visible := True;
+  label4.Visible := True;
+  label5.Visible := True;
+end;
+
+procedure TfrmPrincipal.AtualizarTela;
+begin
+  label2.Caption := 'Produto: ' + FProduto.FNome_Produto;
+  label3.Caption := 'Quantidade: ' + (FProduto.FQuantidade).ToString;
+  label4.Caption := 'Preço Un. : ' + (FProduto.FPreco_Unitario).ToString;
+  label5.Caption := 'Valor Total: ' + (FProduto.FValor_Total).ToString;
+end;
+
+{ BOTOÕES }
+
+procedure TfrmPrincipal.btnCriarProdutoClick(Sender: TObject);
+begin
+  FProduto.FNome_Produto := InputBox('Produto','Digite o nome do Produto,', '');
+  FProduto.FQuantidade := InputBox('Produto','Digite a quantidade do Produto,', '').ToInteger;
+  FProduto.FPreco_Unitario := InputBox('Produto','Digite o preço unitario do Produto,', '').ToDouble;
+  FProduto.FValor_Total := FProduto.FQuantidade * FProduto.FPreco_Unitario;
+
+  AtivarTela;
+  AtualizarTela;
+end;
+
+procedure TfrmPrincipal.btnComprarClick(Sender: TObject);
+var
+  xValorPago: Double;
+begin
+ xValorPago := FProduto.ComprarProduto(StrToInt(edtQuantidade.Text));
+ showMessage('Você pagou: R$:' + (xValorPago).ToString);
+end;
+
+procedure TfrmPrincipal.btnVerDescontoClick(Sender: TObject);
+var
+  xDesconto: Integer;
+begin
+  try
+    xDesconto := FProduto.VerificarDesconto(StrToInt(edtQuantidade.Text));
+    showMessage('Você tem: ' + xDesconto.ToString + '% de Desconto');
+
+    showMessage('Valor a se pagar: R$:' + ((StrToInt(edtQuantidade.Text) * FProduto.FPreco_Unitario) * ().ToString);
+  except
+    ShowMessage('Digite um valor valido');
+  end;
+
+end;
+
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(FProduto);
+end;
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  FProduto := TProduto.Create
+end;
+
+end.

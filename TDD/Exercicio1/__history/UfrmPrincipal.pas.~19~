@@ -1,0 +1,69 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UUCalculadora;
+
+type
+  TfrmPrincipal = class(TForm)
+    edtPrimeiroNumero: TEdit;
+    edtSegundoNumero: TEdit;
+    cmbOperacao: TComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    btnCalcular: TButton;
+    lblResultado: TLabel;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnCalcularClick(Sender: TObject);
+var
+  FCalculadora : TCalculadora;
+  xResultado : Double;
+begin
+  if not Assigned (FCalculadora) then
+    FCalculadora := TCalculadora.Create;
+
+  try
+  
+    case TEnumOperacao(cmbOperacao.ItemIndex) of
+      opSomar:
+        xResultado := FCalculadora.Somar(StrToFloat(edtPrimeiroNumero.Text),
+                                         StrToFloat(edtSegundoNumero.Text));
+
+      opSubtrair:
+        xResultado := FCalculadora.Subtrair(StrToFloat(edtPrimeiroNumero.Text),
+                                            StrToFloat(edtSegundoNumero.Text));
+
+      opMultiplicar:
+        xResultado := FCalculadora.Multiplicar(StrToFloat(edtPrimeiroNumero.Text),
+                                               StrToFloat(edtSegundoNumero.Text));
+
+      opDividir:
+        xResultado := FCalculadora.Dividir(StrToFloat(edtPrimeiroNumero.Text),
+                                           StrToFloat(edtSegundoNumero.Text));
+    end;
+
+    lblResultado.Caption := 'Resultado: ' + FormatFloat('0,00',xResultado);
+  
+  finally
+    FreeAndNil(FCalculadora);
+  end;
+
+end;
+
+end.

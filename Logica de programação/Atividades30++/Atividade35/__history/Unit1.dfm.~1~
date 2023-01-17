@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 216
+  ClientWidth = 139
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 29
+    Top = 8
+    Width = 84
+    Height = 16
+    Caption = 'Conta de Luz'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 29
+    Top = 64
+    Width = 81
+    Height = 105
+    Caption = 'RadioGroup1'
+    Items.Strings = (
+      'Residencia'
+      'Comercio'
+      'Industria')
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 29
+    Top = 37
+    Width = 81
+    Height = 21
+    TabOrder = 1
+    TextHint = 'KW/h'
+  end
+  object Button1: TButton
+    Left = 29
+    Top = 175
+    Width = 81
+    Height = 25
+    Caption = 'Calcular'
+    TabOrder = 2
+  end
+end

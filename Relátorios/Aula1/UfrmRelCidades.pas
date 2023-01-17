@@ -1,0 +1,98 @@
+unit UfrmRelCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, frxClass,
+  frxExportBaseDialog, frxExportPDF, frxDBSet, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Vcl.DBCtrls;
+
+type
+  TfrmRelCidades = class(TForm)
+    FDQuery1: TFDQuery;
+    frxDBDataset1: TfrxDBDataset;
+    frxPDFExport1: TfrxPDFExport;
+    frxReport1: TfrxReport;
+    GroupBox1: TGroupBox;
+    Cidade: TLabel;
+    btnVisualizar: TButton;
+    btnExportar: TButton;
+    dtsCidade: TDataSource;
+    LookUpCidades: TFDTable;
+    DBLookupCidade: TDBLookupComboBox;
+    frxDBDataset2: TfrxDBDataset;
+    FDQuery2: TFDQuery;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnVisualizarClick(Sender: TObject);
+    procedure btnExportarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure PrepararFiltro;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelCidades: TfrmRelCidades;
+
+implementation
+
+{$R *.dfm}
+
+uses UdmConexao;
+
+procedure TfrmRelCidades.btnExportarClick(Sender: TObject);
+var
+  xCaminho : String;
+begin
+  Self.PrepararFiltro;
+
+  xCaminho := ExtractFilePath(Application.ExeName) + 'temp';
+
+  if not DirectoryExists(xCaminho) then
+    ForceDirectories(xCaminho);
+
+  frxPDFExport1.Filename := Format('%s\Endereco.pdf',[xCaminho]);
+  frxReport1.PrepareReport;
+  frxReport1.export(frxPDFExport1);
+end;
+
+procedure TfrmRelCidades.btnVisualizarClick(Sender: TObject);
+begin
+  Self.PrepararFiltro;
+
+  frxReport1.ShowReport;
+end;
+
+procedure TfrmRelCidades.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmRelCidades := nil;
+end;
+
+procedure TfrmRelCidades.FormCreate(Sender: TObject);
+begin
+  LookUpCidades.Open;
+end;
+
+procedure TfrmRelCidades.PrepararFiltro;
+begin
+  FDQuery1.Close;
+  FDQuery1.ParamByName('CITY_ID').AsInteger := 0;
+  if DBLookupCidade.Text <> EmptyStr then
+    FDQuery1.ParamByName('CITY_ID').AsInteger :=  LookUpCidades.ParamByName('CITY_ID').AsInteger;
+  FDQuery1.Open;
+
+  FDQuery2.Close;
+  FDQuery2.ParamByName('CITY').AsString := '';
+  if DBLookupCidade.Text <> EmptyStr then
+    FDQuery2.ParamByName('CITY').AsString := DBLookupCidade.Text;
+  FDQuery2.Open;
+
+end;
+
+end.

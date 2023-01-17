@@ -1,0 +1,215 @@
+﻿object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Cadastrar'
+  ClientHeight = 333
+  ClientWidth = 459
+  Color = clMenuBar
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 15
+    Width = 74
+    Height = 18
+    Caption = 'Cadastrar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 184
+    Top = 20
+    Width = 11
+    Height = 13
+    Caption = 'ID'
+  end
+  object Label5: TLabel
+    Left = 111
+    Top = 231
+    Width = 223
+    Height = 18
+    Caption = 'Deseja comprar algum carro ?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 135
+    Top = 266
+    Width = 64
+    Height = 16
+    Caption = 'Digite o ID:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 243
+    Top = 20
+    Width = 27
+    Height = 13
+    Caption = 'Pre'#231'o'
+  end
+  object Label4: TLabel
+    Left = 301
+    Top = 20
+    Width = 57
+    Height = 13
+    Caption = 'Descontado'
+  end
+  object Situação: TLabel
+    Left = 382
+    Top = 20
+    Width = 41
+    Height = 13
+    Caption = 'Situa'#231#227'o'
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 235
+    Width = 77
+    Height = 13
+    Caption = 'Total Descontos'
+  end
+  object Label8: TLabel
+    Left = 363
+    Top = 235
+    Width = 77
+    Height = 13
+    Caption = 'Total de vendas'
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 280
+    Width = 39
+    Height = 13
+    Caption = 'R$:0,00'
+  end
+  object Label10: TLabel
+    Left = 363
+    Top = 280
+    Width = 39
+    Height = 13
+    Caption = 'R$:0,00'
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 25
+    Top = 66
+    Width = 120
+    Height = 105
+    BiDiMode = bdLeftToRight
+    Caption = 'Tipo de Combustivel'
+    Items.Strings = (
+      #193'lcool'
+      'Gasolina'
+      'Diesel')
+    ParentBiDiMode = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 25
+    Top = 177
+    Width = 120
+    Height = 25
+    Caption = 'Cadastrar'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 25
+    Top = 39
+    Width = 120
+    Height = 21
+    TabOrder = 2
+    TextHint = 'Valor do carro'
+  end
+  object Edit2: TEdit
+    Left = 205
+    Top = 265
+    Width = 108
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 135
+    Top = 292
+    Width = 178
+    Height = 25
+    Caption = 'Comprar'
+    TabOrder = 4
+    OnClick = Button2Click
+  end
+  object Linha: TMemo
+    Left = 25
+    Top = 208
+    Width = 414
+    Height = 17
+    Color = cl3DLight
+    TabOrder = 5
+  end
+  object Memo2: TMemo
+    Left = 161
+    Top = 39
+    Width = 57
+    Height = 163
+    Alignment = taCenter
+    TabOrder = 6
+  end
+  object Memo3: TMemo
+    Left = 216
+    Top = 39
+    Width = 79
+    Height = 163
+    Alignment = taCenter
+    TabOrder = 7
+  end
+  object Memo4: TMemo
+    Left = 293
+    Top = 39
+    Width = 79
+    Height = 163
+    Alignment = taCenter
+    TabOrder = 8
+  end
+  object Memo5: TMemo
+    Left = 364
+    Top = 39
+    Width = 75
+    Height = 163
+    Alignment = taCenter
+    TabOrder = 9
+  end
+  object Linha2: TMemo
+    Left = 91
+    Top = 231
+    Width = 18
+    Height = 98
+    Color = cl3DLight
+    TabOrder = 10
+  end
+  object Linha3: TMemo
+    Left = 339
+    Top = 231
+    Width = 18
+    Height = 98
+    Color = cl3DLight
+    TabOrder = 11
+  end
+end

@@ -1,0 +1,73 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  TRegCliente = record
+    Codigo: Integer;
+    Nome: String;
+    Idade: Byte;
+  end;
+
+  TListaCliente = array of TRegCliente;
+
+var
+  xContinuar: Integer;
+  xCliente: TRegCliente;
+  xListaCliente: TListaCliente;
+
+procedure AddCliente(const aRegCliente: TRegCliente);
+  begin
+    SetLength(xListaCliente, Length(xListaCliente)+1);
+    xListaCliente[Length(xListaCliente)-1]:= aRegCliente;
+  end;
+
+procedure ListarClientes;
+  var
+    I: Integer;
+    xRegCliente: TRegCliente;
+  begin
+    writeln('Listando...');
+
+    for I:= 0 to Length(xListaCliente)-1 do
+      begin
+        xRegCliente := xListaCliente[I];
+
+        writeln('Codigo: ' + xRegCliente.Codigo.ToString);
+        writeln('Nome  : ' + xRegCliente.Nome);
+        writeln('Idade : ' + xRegCliente.Idade.ToString);
+      end;
+  end;
+
+
+begin
+  try
+    repeat
+      write('Entre com o Codigo do Cliente: ');
+      readln(xCliente.Codigo);
+
+      write('Entre com o Nome do Cliente: ');
+      readln(xCliente.Nome);
+
+      write('Entre com a Idade do Cliente: ');
+      readln(xCliente.Idade);
+
+      AddCliente(xCliente);
+
+      write('Deseja Cadastrar mais clientes (1-Sim / 2-Não): ');
+      readln(xContinuar);
+    until (xContinuar = 2);
+
+    ListarClientes;
+
+    sleep(40000);
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

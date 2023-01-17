@@ -1,0 +1,22 @@
+unit UUCalculadora;
+
+interface
+
+type TCalculadora = class
+  public
+
+    function somar(aNum1, aNum2: Double): Double;
+  private
+
+end;
+
+implementation
+
+{ TCalculadora }
+
+function TCalculadora.somar(aNum1, aNum2: Double): Double;
+begin
+
+end;
+
+end.

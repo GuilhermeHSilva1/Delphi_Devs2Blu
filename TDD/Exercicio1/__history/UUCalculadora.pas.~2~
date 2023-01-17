@@ -1,0 +1,40 @@
+unit UUCalculadora;
+
+interface
+
+type TCalculadora = class
+  public
+
+    function somar(aNum1, aNum2: Double): Double;
+    function subtrair(aNum1, aNum2: Double): Double;
+    function multiplicar(aNum1, aNum2: Double): Double;
+    function divivir(aNum1, aNum2: Double): Double;
+  private
+
+end;
+
+implementation
+
+{ TCalculadora }
+
+function TCalculadora.divivir(aNum1, aNum2: Double): Double;
+begin
+  Result := aNum1 + aNum2;
+end;
+
+function TCalculadora.multiplicar(aNum1, aNum2: Double): Double;
+begin
+  Result := aNum1 + aNum2;
+end;
+
+function TCalculadora.somar(aNum1, aNum2: Double): Double;
+begin
+  Result := aNum1 + aNum2;
+end;
+
+function TCalculadora.subtrair(aNum1, aNum2: Double): Double;
+begin
+  Result := aNum1 + aNum2;
+end;
+
+end.

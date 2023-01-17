@@ -1,0 +1,71 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Memo1: TMemo;
+    Button1: TButton;
+    Label2: TLabel;
+    Label3: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    procedure CalcularDesconto;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.CalcularDesconto;
+var
+  xAno, xTotalCarro, xCarroAntigo: Integer;
+  xValor, xPreco: Double;
+  xResposta: String;
+begin
+  xTotalCarro:= 0;
+  xCarroAntigo:=0;
+
+  while (xResposta <> 'N') or (xResposta <> 'n') do
+  begin
+    xValor:= StrToFloat(InputBox('Informar', 'Digite o valor do carro: ', '1400,99'));
+    xAno:= StrToInt(InputBox('Informar', 'Digite o ano do carro:' ,'2000'));
+
+    if (xAno <= 2000) then
+    begin
+      xPreco:= xValor * 0.88;
+      xTotalCarro:= xTotalCarro + 1;
+      xCarroAntigo:= xCarroAntigo + 1;
+    end
+    else
+    begin
+      xPreco:= xValor * 0.93;
+      xTotalCarro := xTotalCarro + 1;
+    end;
+
+    xResposta := InputBox('Informar','Deseja Continuar ? (S/N):', 'S');
+    Memo1.Lines.Add('De R$:' + FormatFloat('0.00',xValor) + ' / Para R$:' + FormatFloat('0.00', xPreco))
+  end;
+
+    label2.Caption:= 'Total de carros: ' + IntToStr(xTotalCarro);
+    label3.Caption:= 'Carros dos anos até 2000: ' + IntToStr(xCarroAntigo);
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  CalcularDesconto;
+end;
+
+end.

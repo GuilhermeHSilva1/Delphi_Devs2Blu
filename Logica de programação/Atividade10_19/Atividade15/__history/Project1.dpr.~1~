@@ -1,0 +1,22 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+begin
+  var xNum: Double;
+  try
+    write('Digite um valor: ');
+    readln(xNum);
+
+    if (xNum >= 100) and (xNum <= 200) then
+
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

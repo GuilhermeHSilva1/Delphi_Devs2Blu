@@ -1,0 +1,17 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Principal in 'Principal.pas' {frmPrincipal},
+  Cliente in 'Cliente.pas' {frmClientes},
+  Fornecedor in 'Fornecedor.pas' {Fornecedores},
+  Produtos in 'Produtos.pas' {frmProdutos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.
