@@ -1,0 +1,15 @@
+program BombaCombustivel;
+
+uses
+  Vcl.Forms,
+  Principal in 'Principal.pas' {BombaCombustivel},
+  UBomba in 'UBomba.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TBombaCombustivel);
+  Application.Run;
+end.

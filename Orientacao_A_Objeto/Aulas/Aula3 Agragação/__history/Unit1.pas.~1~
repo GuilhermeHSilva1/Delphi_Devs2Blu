@@ -1,0 +1,29 @@
+unit Unit1;
+
+interface
+
+TJogador = class(TTime)
+    private
+        Fnome: String;
+        Fidade: Integer;
+        Fposicao: String;
+
+    function GetIdade: Integer;
+    function GetNome: String;
+    function GetPosicao: String;
+
+    procedure SetIdade(const Value: Integer);
+    procedure SetNome(const Value: String);
+    procedure SetPosiaco(const Value: String);
+
+    public
+
+      property Nome: String read GetNome write SetNome;
+      property Idade: Integer read GetIdade write SetIdade;
+      property Posicao: String read GetPosicao write SetPosicao;
+
+    end;
+
+implementation
+
+end.

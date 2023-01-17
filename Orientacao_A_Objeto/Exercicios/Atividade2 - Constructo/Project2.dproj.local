@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/10 20:16:08.000.775,=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:18:55.000.777,C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Exercicios\Atividade2\Unit2.pas=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:18:55.000.777,C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Exercicios\Atividade2\Unit2.dfm=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/10/10 20:26:17.000.053,=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/10 20:26:27.000.249,C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Exercicios\Atividade2\UContas.pas=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/10 20:38:55.000.752,C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Exercicios\Atividade2\Project2.dproj=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="UContas.pas"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -1,0 +1,121 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 536
+  ClientWidth = 445
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object AndarAgora: TLabel
+    Left = 20
+    Top = 23
+    Width = 86
+    Height = 16
+    Caption = 'Andar atual: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object AndarMax: TLabel
+    Left = 270
+    Top = 23
+    Width = 105
+    Height = 16
+    Caption = 'Andar Maximo:  '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object PessoasAgora: TLabel
+    Left = 20
+    Top = 70
+    Width = 143
+    Height = 16
+    Caption = 'Pessoas no elevador: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object PessoasMax: TLabel
+    Left = 270
+    Top = 70
+    Width = 114
+    Height = 16
+    Caption = 'Pessoas Maxima: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object Inicializar: TButton
+    Left = 141
+    Top = 117
+    Width = 172
+    Height = 25
+    Caption = 'Inicializar'
+    TabOrder = 0
+    OnClick = InicializarClick
+  end
+  object Adicionar: TButton
+    Left = 70
+    Top = 210
+    Width = 96
+    Height = 25
+    Caption = 'Adicionar Pessoas'
+    TabOrder = 1
+    Visible = False
+    OnClick = AdicionarClick
+  end
+  object Remover: TButton
+    Left = 182
+    Top = 210
+    Width = 92
+    Height = 25
+    Caption = 'Remover Pessoas'
+    TabOrder = 2
+    Visible = False
+    OnClick = RemoverClick
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 70
+    Top = 241
+    Width = 314
+    Height = 250
+    Caption = 'Andares'
+    Columns = 4
+    TabOrder = 3
+    Visible = False
+  end
+  object Mover: TButton
+    Left = 288
+    Top = 210
+    Width = 96
+    Height = 25
+    Caption = 'Usar Elevador'
+    TabOrder = 4
+    Visible = False
+    OnClick = MoverClick
+  end
+end

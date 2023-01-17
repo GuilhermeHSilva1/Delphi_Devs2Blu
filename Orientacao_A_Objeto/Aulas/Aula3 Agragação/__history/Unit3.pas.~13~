@@ -1,0 +1,46 @@
+unit Unit3;
+
+interface
+
+type
+    TTime = class
+    private
+        FnomeTime: String;
+        Ftecnico: String;
+
+    function GetNomeTime: String;
+    function GetTecnico: String;
+
+    procedure SetNomeTime(const Value: String);
+    procedure SetTecnico(const Value: String);
+
+    public
+        FanoFundacao: TDate;
+
+        property NomeTime: String read GetNomeTime write SetNomeTime;
+        property Tecnico: String read GetTecnico write SetTecnico;
+    end;
+
+{ TTime }
+
+function TTime.GetNomeTime: String;
+begin
+
+end;
+
+function TTime.GetTecnico: String;
+begin
+
+end;
+
+procedure TTime.SetNomeTime(const Value: String);
+begin
+
+end;
+
+procedure TTime.SetTecnico(const Value: String);
+begin
+
+end;
+
+end.

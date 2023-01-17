@@ -1,0 +1,22 @@
+unit Unit3;
+
+interface
+
+type
+    TTime = class
+    private
+        FnomeTime: String;
+        Ftecnico: String;
+
+    public
+        FanoFundacao: TDate;
+
+        property NomeTime: String read GetNomeTime write SetNomeTime;
+        property Tecnico: String read GetTecnico write SetTecnico;
+    end;
+
+
+{ TTime }
+
+
+end.

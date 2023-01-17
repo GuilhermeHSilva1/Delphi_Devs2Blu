@@ -1,0 +1,25 @@
+unit UTriangulo;
+
+interface
+
+type
+  TTriangulo = class
+    private
+      a:Double;
+      b:Double;
+      c:Double;
+    public
+      function Area:Double;
+  end;
+
+implementation
+
+function TTriangulo.Area: Double;
+var
+  xP:Double;
+  begin
+    xP := (a+b+c) / 2;
+    Result:= Sqrt(xP * (xP-a) * (xP-b) * (xP-c) );
+  end;
+
+end.

@@ -1,0 +1,65 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.WinXPickers;
+
+type
+  TForm2 = class(TForm)
+    Edit1: TEdit;
+    Button1: TButton;
+    Edit2: TEdit;
+    DatePicker1: TDatePicker;
+    Label1: TLabel;
+    Label2: TLabel;
+    label3: TLabel;
+    Shape1: TShape;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    procedure Registrar;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses
+  UPessoas;
+
+{$R *.dfm}
+procedure TForm2.Registrar;
+var
+  xPessoa: TPessoas;
+  xIdade: Integer;
+begin
+
+  xPessoa:= TPessoas.Create;
+  try
+
+  xPessoa.Nome:= Edit1.Text;
+  xPessoa.Altura:= Edit2.Text;
+  xPessoa.Data:= DatePicker1.Date;
+
+  xIdade:= xPessoa.Calcular(xPessoa.Data);
+
+  Memo1.Lines.Add(xPessoa.RetornarDados);
+  Memo1.Lines.Add('----------------------------------------------------');
+  finally
+    FreeAndNil(xPessoa);
+  end;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+  Registrar;
+end;
+
+end.

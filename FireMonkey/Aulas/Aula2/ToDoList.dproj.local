@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/09 20:45:09.000.831,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/09 20:46:27.000.066,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/12/09 20:46:41.000.084,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/12/09 20:47:09.000.849,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Desktop\sal2\USplash.pas</Transaction>
+    <Transaction>2022/12/09 20:47:09.000.849,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.fmx=C:\Users\mysql\Desktop\sal2\USplash.fmx</Transaction>
+    <Transaction>2022/12/09 20:47:15.000.090,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\mysql\Desktop\sal2\UfrmPrincipal.fmx</Transaction>
+    <Transaction>2022/12/09 20:47:15.000.090,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Desktop\sal2\UfrmPrincipal.pas</Transaction>
+    <Transaction>2022/12/09 20:47:27.000.522,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Desktop\sal2\ToDoList.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

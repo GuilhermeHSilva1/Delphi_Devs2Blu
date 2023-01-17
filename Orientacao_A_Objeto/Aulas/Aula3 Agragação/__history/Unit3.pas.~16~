@@ -1,0 +1,16 @@
+unit Unit3;
+
+interface
+
+type
+    TTime = class
+    private
+        nomeTime: String;
+        tecnico: String;
+    public
+        anoFundacao: TDate;
+    end;
+
+implementation
+
+end.

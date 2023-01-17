@@ -1,0 +1,184 @@
+unit Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, UBomba,
+  Vcl.ComCtrls, Vcl.Imaging.pngimage, CommCtrl;
+
+type
+  TTipoCombustivel = (Gasolina, Alcool, Diesel);
+  TAbastecer = (Litro, Valor);
+  TForm1 = class(TForm)
+    Preco: TEdit;
+    Quantidade: TEdit;
+    RadioGroup1: TRadioGroup;
+    Cadastrar: TButton;
+    label1: TLabel;
+    Label2: TLabel;
+    Shape1: TShape;
+    Shape2: TShape;
+    ValorAbastecer: TEdit;
+    RadioGroup2: TRadioGroup;
+    Memo1: TMemo;
+    AltCombustivel: TButton;
+    AltPreco: TButton;
+    AltQuantidade: TButton;
+    Memo2: TMemo;
+    Memo3: TMemo;
+    Abastecer: TButton;
+    Shape3: TShape;
+    Label3: TLabel;
+    Modificar: TButton;
+    Tanque: TProgressBar;
+    Label4: TLabel;
+    Image1: TImage;
+    procedure CadastrarClick(Sender: TObject);
+    procedure AltCombustivelClick(Sender: TObject);
+    procedure ModificarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure AltPrecoClick(Sender: TObject);
+    procedure AltQuantidadeClick(Sender: TObject);
+    procedure AbastecerClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure AtualizarForm;
+    procedure AtualizarMemos;
+    var xBomba: TBomba;
+  public
+    { Public declarations }
+  end;
+
+ var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.AtualizarForm;
+begin
+  Cadastrar.Visible:= False;
+  AltPreco.Visible:= True;
+  AltQuantidade.Visible:= True;
+  AltCombustivel.Visible:= True;
+  Abastecer.Visible:= True;
+  Preco.Text:= '';
+  Preco.ReadOnly:= True;
+  Quantidade.Text:= '';
+  RadioGroup1.ItemIndex:= -1;
+  Quantidade.ReadOnly:= True;
+end;
+
+procedure TForm1.AtualizarMemos;
+begin
+  Memo1.Lines.Clear; Memo2.Lines.Clear; Memo3.Lines.Clear;
+
+  Memo1.Lines.Add(xBomba.TipoCombustivel);
+  Memo2.Lines.Add('R$:' + FormatFloat('0.000',xBomba.ValorLitro));
+  Memo3.Lines.Add(FormatFloat('0.000',xBomba.Quantidade) + ' Litros');
+  Tanque.Position:= Trunc(xBomba.Quantidade);
+end;
+
+procedure TForm1.CadastrarClick(Sender: TObject);
+begin
+  if (Preco.Text = '') or (Quantidade.Text = '') or (RadioGroup1.ItemIndex = -1)then
+    showMessage('Por favor preencha todos os valores')
+  else if (StrToFloatDef(Quantidade.text, 1001) > 1000) then
+    showMessage('Capacidade maxima do tanque é de 1000 Litros')
+  else
+  begin
+  xBomba:= TBomba.Create;
+      xBomba.ValorLitro:= StrToFloat(Preco.Text);
+      xBomba.Quantidade:= StrToFloat(Quantidade.Text);
+      case TTipoCombustivel(RadioGroup1.ItemIndex) of
+        Gasolina:
+          xBomba.TipoCombustivel:= 'Gasolina';
+        Alcool:
+          xBomba.TipoCombustivel:= 'Alcool';
+        Diesel:
+          xBomba.TipoCombustivel:= 'Diesel';
+      end;
+      Tanque.Position:= Trunc(xBomba.Quantidade);
+      AtualizarForm;
+      AtualizarMemos;
+  end;
+end;
+
+procedure TForm1.AltPrecoClick(Sender: TObject);
+var
+  xNovoPreco: Double;
+begin
+  if not TryStrToFloat(InputBox('Informar','Informe o novo preço',''), xNovoPreco) then
+    raise Exception.Create('Valor Invalido')
+  else
+  begin
+    xBomba.AlterarValor(xNovoPreco);
+    AtualizarMemos;
+  end;
+end;
+
+procedure TForm1.AltQuantidadeClick(Sender: TObject);
+var
+  xNovoPreco : Double;
+begin
+  if not TryStrToFloat(InputBox('Informar','Informe quantos litros tem',''), xNovoPreco) then
+    raise Exception.Create('Valor Invalido')
+  else
+    begin
+      xBomba.AlterarQuantidade(xNovoPreco);
+      AtualizarMemos;
+    end;
+end;
+
+procedure TForm1.AltCombustivelClick(Sender: TObject);
+begin
+  showMessage('Clique no novo tipo de combustivel na esquerda, e após isso clique em modificar');
+  Modificar.Visible:= True;
+end;
+
+procedure TForm1.ModificarClick(Sender: TObject);
+begin
+  if(RadioGroup1.ItemIndex = -1) then
+    showMessage('Selecione o novo tipo de combustivel')
+  else
+  begin
+    xBomba.AlterarCombustivel(RadioGroup1.ItemIndex);
+    Modificar.Visible:= False;
+  end;
+  AtualizarMemos;
+end;
+
+procedure TForm1.AbastecerClick(Sender: TObject);
+var
+  xValor: Double;
+begin
+  if ValorAbastecer.Text = '' then
+    showMessage('Informe um valor')
+  else
+    begin
+      xValor:= StrToFloatDef(ValorAbastecer.Text,0);
+      case TAbastecer(RadioGroup2.ItemIndex) of
+        Litro:
+          begin
+            label3.Caption:= ('Total a pagar R$:' + FormatFloat('0.00',(xBomba.AbastecerPorLitro(xValor))));
+            AtualizarMemos;
+          end;
+        Valor:
+          begin
+            label3.Caption:= ('Quantidade de Litros: ' + FormatFloat('0.000',(xBomba.AbastecerPorValor(xValor))));
+            AtualizarMemos;
+          end
+        else
+          showMessage('Selecione como deseja abastecer');
+      end;
+    end;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(xBomba);
+end;
+
+end.

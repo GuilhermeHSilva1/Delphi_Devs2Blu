@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/05 19:44:06.000.799,=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/05 19:49:27.000.948,C:\Users\Guilhermehillesheim\Documents\Atividades OOP\Atividade1\Unit1.dfm=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/05 19:49:27.000.948,C:\Users\Guilhermehillesheim\Documents\Atividades OOP\Atividade1\Unit1.pas=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/05 19:49:30.000.358,C:\Users\Guilhermehillesheim\Documents\Atividades OOP\Atividade1\Project1.dproj=C:\Users\Guilhermehillesheim\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/05 21:22:09.000.193,=C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Aulas\Aula1\Unit2.pas</Transaction>
+    <Transaction>2022/10/05 21:22:18.000.760,C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Aulas\Aula1\Unit2.pas=C:\Users\Guilhermehillesheim\Documents\Orientacao_A_Objeto\Aulas\Aula1\UTriangulo.pas</Transaction>
+  </Transactions>
+</BorlandProject>

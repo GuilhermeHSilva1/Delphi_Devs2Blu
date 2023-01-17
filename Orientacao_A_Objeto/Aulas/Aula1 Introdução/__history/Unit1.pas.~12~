@@ -1,0 +1,141 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+    function CalcularTriangulo1:Double;
+    function CalcularTriangulo2:Double;
+    procedure CalcularAreasOOP;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses
+  UTriangulo;
+
+{$R *.dfm}
+
+function TForm1.CalcularTriangulo1;
+var
+  a,b,c,p,xArea: Double;
+begin
+  if not TryStrToFloat(Edit1.Text, a) then
+    raise Exception.Create('Digite valores validos');
+  if not TryStrToFloat(Edit2.Text, b) then
+    raise Exception.Create('Digite valores validos');
+  if not TryStrToFloat(Edit3.Text, c) then
+    raise Exception.Create('Digite valores validos');
+
+  p:= (a+b+c) / 2;
+  xArea := Sqrt(p*(p-a)*(p-b)*(p-c));
+
+  label9.Caption:= ('Triangulo X Área: ' + FormatFloat('0.00',xArea));
+  Result:= xArea;
+end;
+
+function TForm1.CalcularTriangulo2;
+var
+  a,b,c,p,xArea: Double;
+begin
+  if not TryStrToFloat(Edit4.Text, a) then
+    raise Exception.Create('Digite valores validos');
+  if not TryStrToFloat(Edit5.Text, b) then
+    raise Exception.Create('Digite valores validos');
+  if not TryStrToFloat(Edit6.Text, c) then
+    raise Exception.Create('Digite valores validos');
+
+  p:= (a+b+c) / 2;
+  xArea := Sqrt(p*(p-a)*(p-b)*(p-c));
+
+  label10.Caption:= ('Triangulo Y Área: ' + FormatFloat('0.00',xArea));
+  Result:= xArea;
+end;
+
+procedure TForm1.CalcularAreasOOP;
+var
+  xTrianguloX: TTriangulo;
+  xTrianguloY: TTriangulo;
+
+  xAreaX: Double;
+  xAreaY: Double;
+begin
+  xTrianguloX := TTriangulo.Create;
+  xTrianguloY := TTriangulo.Create;
+
+  try
+    xTrianguloX.A := StrToFloatDef(Edit1.Text,0);
+    xTrianguloX.B := StrToFloatDef(Edit2.Text,0);
+    xTrianguloX.C := StrToFloatDef(Edit3.Text,0);
+
+    // xTrianguloX.D := 10; Não é possivel
+
+    xAreaX:= xTrianguloX.Area;
+
+    xTrianguloY.A := StrToFloatDef(Edit4.Text,0);
+    xTrianguloY.B := StrToFloatDef(Edit5.Text,0);
+    xTrianguloY.C := StrToFloatDef(Edit6.Text,0);
+
+    xAreaY:= xTrianguloY.Area;
+
+  label9.Caption:= ('Triangulo X Área: ' + FormatFloat('0.00',xAreaX));
+  label10.Caption:= ('Triangulo Y Área: ' + FormatFloat('0.00',xAreaY));
+
+
+    if (xAreaX > xAreaY) then
+      label11.Caption:= ('A área do triangulo X é maior')
+    else
+      label11.Caption:= ('A área do triangulo Y é maior');
+  finally
+    FreeAndNil(xTrianguloX);
+    FreeAndNil(xtrianguloY);
+  end;
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if (CalcularTriangulo1 > CalcularTriangulo2) then
+    label11.Caption:= ('A área do triangulo X é maior')
+  else
+    label11.Caption:= ('A área do triangulo Y é maior');
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+ CalcularAreasOOP;
+end;
+
+end.

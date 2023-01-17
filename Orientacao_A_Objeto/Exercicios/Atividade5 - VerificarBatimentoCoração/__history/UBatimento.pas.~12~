@@ -1,0 +1,41 @@
+unit UBatimento;
+
+uses
+  vlc.Dialogs;
+
+interface
+
+type
+  TCoracao = class
+    private
+      FBatimentos: Integer;
+
+      function GetBatimentos: Integer;
+      procedure SetBatimentos(const Value: Integer);
+
+    public
+      property Batimentos: Integer read GetBatimentos write SetBatimentos;
+
+      function VerificarBatimentos(const pValor: Integer): String;
+  end;
+
+implementation
+
+{ TCoração }
+
+function TCoracao.GetBatimentos: Integer;
+begin
+  Result:= FBatimentos;
+end;
+
+procedure TCoracao.SetBatimentos(const Value: Integer);
+begin
+  FBatimentos:= Value;
+end;
+
+function TCoracao.VerificarBatimentos(const pValor: Integer): String;
+begin
+
+end;
+
+end.

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/16 20:59:28.000.865,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/16 21:00:09.000.168,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\UfrmPrincipal.fmx=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/12/16 21:00:09.000.168,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/16 21:00:12.000.386,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Project1.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/12/21 18:37:21.000.695,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Project1.dproj=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\LojaCafé.dproj</Transaction>
+    <Transaction>2022/12/21 18:38:15.000.805,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\LojaCafé.dproj=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\LojaCafe.dproj</Transaction>
+    <Transaction>2022/12/21 18:40:55.000.973,=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 18:43:30.000.753,=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 18:43:46.000.025,=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 18:44:01.000.189,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Unit1.fmx=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\UfrmDescricao.fmx</Transaction>
+    <Transaction>2022/12/21 18:44:01.000.189,C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\Unit1.pas=C:\Users\mysql\Documents\FireMonkey\Atividades\Aplicação front\UfrmDescricao.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="RX8RB0CYSVF" Android64="RX8RB0CYSVF"/>
+	</ActiveMobileDevice>
+</BorlandProject>

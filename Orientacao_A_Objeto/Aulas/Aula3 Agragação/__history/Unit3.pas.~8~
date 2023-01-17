@@ -1,0 +1,69 @@
+unit Unit3;
+
+interface
+
+type
+    TTime = class
+    private
+        FnomeTime: String;
+        Ftecnico: String;
+    public
+        FanoFundacao: TDate;
+    end;
+
+  TJogador = class(TTime)
+    private
+        Fnome: String;
+        Fidade: Integer;
+        Fposicao: String;
+
+    function GetIdade: Integer;
+    function GetNome: String;
+    function GetPosicao: String;
+
+    procedure SetIdade(const Value: Integer);
+    procedure SetNome(const Value: String);
+    procedure SetPosiaco(const Value: String);
+
+    public
+      property Nome: String read GetNome write SetNome;
+      property Idade: Integer read GetIdade write SetIdade;
+      property Posicao: String read GetPosicao write SetPosiaco;
+
+    end;
+
+implementation
+
+{ TJogador }
+
+function TJogador.GetIdade: Integer;
+begin
+
+end;
+
+function TJogador.GetNome: String;
+begin
+
+end;
+
+function TJogador.GetPosicao: String;
+begin
+
+end;
+
+procedure TJogador.SetIdade(const Value: Integer);
+begin
+
+end;
+
+procedure TJogador.SetNome(const Value: String);
+begin
+
+end;
+
+procedure TJogador.SetPosiaco(const Value: String);
+begin
+
+end;
+
+end.

@@ -1,0 +1,153 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 535
+  ClientWidth = 369
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ltyPrincipal: TLayout
+    Align = Client
+    Size.Width = 369.000000000000000000
+    Size.Height = 535.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lytCabecario: TLayout
+      Align = Top
+      Size.Width = 369.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rect_Cabecario: TRectangle
+        Align = Client
+        Fill.Color = xFF4C8CE8
+        Size.Width = 369.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object lblTitulo: TLabel
+        Align = Client
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 20.000000000000000000
+        Size.Width = 349.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claWhite
+        Text = 'C'#225'lculo de IMC'
+        TabOrder = 1
+      end
+      object ShadowEffect1: TShadowEffect
+        Distance = 1.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+    object lytInformacoes: TLayout
+      Align = Top
+      Position.Y = 50.000000000000000000
+      Size.Width = 369.000000000000000000
+      Size.Height = 220.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object edtAltura: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = NumberPad
+        Position.X = 20.000000000000000000
+        Position.Y = 53.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Size.Width = 329.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblAltura: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 30.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 329.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFFB1AFAF
+        Text = 'Altura(cm)'
+        TabOrder = 3
+      end
+      object edtKg: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        KeyboardType = NumberPad
+        Position.X = 20.000000000000000000
+        Position.Y = 118.000000000000000000
+        Margins.Left = 20.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Size.Width = 329.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblKg: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Margins.Left = 20.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 20.000000000000000000
+        Position.X = 20.000000000000000000
+        Position.Y = 95.000000000000000000
+        Size.Width = 329.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFFB1AFAF
+        Text = 'Peso (kg)'
+        TabOrder = 2
+      end
+      object lblPesoIdeal: TLabel
+        Align = Bottom
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 197.000000000000000000
+        Size.Width = 369.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'Peso Ideal ()'
+        TabOrder = 4
+      end
+    end
+    object rect_Botao: TRectangle
+      Align = Top
+      Fill.Color = xFF4C8CE8
+      Margins.Left = 25.000000000000000000
+      Margins.Top = 40.000000000000000000
+      Margins.Right = 25.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 310.000000000000000000
+      Size.Width = 319.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object btnCalcular: TButton
+        Align = Client
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 319.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Calcular'
+        TextSettings.FontColor = claWhite
+        OnClick = btnCalcularClick
+      end
+    end
+  end
+end

@@ -1,0 +1,40 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 151
+  ClientWidth = 187
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnMouseDown = FormMouseDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 19
+    Top = 30
+    Width = 151
+    Height = 13
+    Caption = 'Verificar batimentos do cora'#231#227'o'
+  end
+  object Button1: TButton
+    Left = 40
+    Top = 70
+    Width = 101
+    Height = 25
+    Caption = 'Come'#231'ar'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 15650
+    OnTimer = Timer1Timer
+    Left = 80
+    Top = 110
+  end
+end

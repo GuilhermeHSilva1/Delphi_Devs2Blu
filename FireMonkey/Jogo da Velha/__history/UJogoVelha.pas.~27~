@@ -1,0 +1,213 @@
+unit UJogoVelha;
+
+interface
+
+type
+  TJogador = (tpPlayer1 = 1, tpCpu);
+  TMinhaLinha = array[1..3] of byte;
+
+  TJogoVelha = class
+    private
+      FFimJogo: Boolean;
+      FJogadas: Byte;
+    
+      FPrimeiraLinha: TMinhaLinha;
+      FSegundaLinha: TMinhaLinha;
+      FTerceiraLinha: TMinhaLinha;
+
+      FPrimeiraColuna: TMinhaLinha;
+      FSegundaColuna: TMinhaLinha;
+      FTerceiraColuna: TMinhaLinha;
+
+      FPrimeiraDiagonal: TMinhaLinha;
+      FSegundaDiagonal: TMinhaLinha;
+
+      function GetFimJogo: Boolean;
+      function GetJogadas: Byte;
+
+      procedure SetFimJogo(const Value: Boolean);
+      procedure SetJogadas(const Value: Byte);
+
+      procedure VerificarFimDoJogo(const aJogador: TJogador; const aLinha: TMinhaLinha); overload;
+    
+    public
+      constructor Create;
+
+      procedure ReiniciarJogo;
+      procedure RealizarJogada(const aJogador: TJogador; const aLinha, aColuna: Byte);
+      procedure VerificarFimDoJogo(const aJogador: TJogador); overload;
+
+      function JogadaComputador: String;
+
+      property Jogadas: Byte read GetJogadas write SetJogadas;
+      property FimJogo: Boolean read GetFimJogo write SetFimJogo;
+  end;
+
+implementation
+
+uses
+  SysUtils;
+
+{ TJogoVelha }
+
+constructor TJogoVelha.Create;
+begin
+  FJogadas := 0;
+end;
+
+{ Funções }
+
+function TJogoVelha.GetFimJogo: Boolean;
+begin
+
+end;
+
+function TJogoVelha.GetJogadas: Byte;
+begin
+
+end;
+
+function TJogoVelha.JogadaComputador: String;
+var
+  x, y: Byte;
+begin
+  if FJogadas = 5 then
+    exit;
+
+  while True do
+    begin
+      x := Random(3)+1;
+      y := Random(3)+1;
+
+      //Linhas
+      if (x = 1) then
+        begin
+          if FPrimeiraLinha[Y] > 0 then
+            continue;
+        end
+        
+      else if x = 2 then
+        begin
+          if FSegundaLinha[Y] > 0 then
+            continue;
+        end
+        
+      else if (x = 3) then
+        begin
+          if FTerceiraLinha[Y] > 0 then
+            continue;
+        end;
+
+      //Colunas
+      if (y = 1) then
+        begin
+          if FPrimeiraColuna[X] > 0 then
+            Continue;
+        end
+        
+      else if (Y = 2) then
+        begin
+          if FSegundaColuna[X] > 0 then
+            continue;
+        end
+        
+      else if (Y = 3) then
+        begin
+          if FTerceiraColuna[X] > 0 then
+            continue;
+        end;
+
+      //Diagonal
+      if (x = 1) and (y = 1) then
+        begin
+          if FprimeiraDiagonal[1] > 0 then
+            continue;
+        end
+
+      else if (x = 2) and (y = 2) then
+        begin
+          if (FprimeiraDiagonal[2] > 0) and (FSegundaDiagonal[2] > 0) then
+            continue;
+        end
+
+      else if (x = 3) and (y = 3) then
+        begin
+          if FprimeiraDiagonal[3] > 0 then
+            continue;
+        end
+
+      else if (x = 1) and (y = 3) then
+        begin
+          if FSegundaDiagonal[1] > 0 then
+            continue;
+        end
+         
+      else if (x = 3) and (y = 1) then
+        begin
+          if FSegundaDiagonal[3] > 0 then
+            continue;
+        end;
+        
+        break;
+    end;
+
+    Result := x.ToString + '_' + y.ToString;
+end;
+
+{ Procedures }
+
+procedure TJogoVelha.RealizarJogada(const aJogador: TJogador; const aLinha,
+  aColuna: Byte);
+begin
+
+end;
+
+procedure TJogoVelha.ReiniciarJogo;
+begin
+
+end;
+
+procedure TJogoVelha.SetFimJogo(const Value: Boolean);
+begin
+
+end;
+
+procedure TJogoVelha.SetJogadas(const Value: Byte);
+begin
+
+end;
+
+procedure TJogoVelha.VerificarFimDoJogo(const aJogador: TJogador);
+begin
+  Self.VerificarFimDoJogo(aJogador, FPrimeiraLinha);
+  Self.VerificarFimDoJogo(aJogador, FSegundaLinha);
+  Self.VerificarFimDoJogo(aJogador, FTerceiraLinha);
+
+  Self.VerificarFimDoJogo(aJogador, FPrimeiraColuna);
+  Self.VerificarFimDoJogo(aJogador, FSegundaColuna);
+  Self.VerificarFimDoJogo(aJogador, FTerceiraColuna);
+
+  Self.VerificarFimDoJogo(aJogador, FprimeiraDiagonal);
+  Self.VerificarFimDoJogo(aJogador, FSegundaDiagonal);
+end;
+
+procedure TJogoVelha.VerificarFimDoJogo(const aJogador: TJogador;
+  const aLinha: TMinhaLinha);
+var
+  I: Integer;
+begin
+  if FFimJogo then
+    Exit;
+
+  FFimJogo := True;
+  for I := 1 to 3 do
+    begin
+      if aLinha[I] <> Integer(aJogador) then
+        begin
+          FFimJogo := False;
+          Break;
+        end;
+    end;
+end;
+
+end.

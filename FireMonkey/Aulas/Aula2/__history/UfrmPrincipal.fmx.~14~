@@ -1,0 +1,73 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 527
+  ClientWidth = 392
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 392.000000000000000000
+    Size.Height = 527.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Size.Width = 392.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Rectangle1: TRectangle
+        Align = Client
+        Fill.Color = xFF525666
+        Size.Width = 392.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object edtNovaTarefa: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 0
+          TextSettings.FontColor = claFloralwhite
+          Position.X = 10.000000000000000000
+          Position.Y = 8.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Size.Width = 271.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Nova Tarefa'
+          StyledSettings = [Family, Size, Style]
+        end
+        object btnAdicionar: TButton
+          Align = Right
+          Margins.Right = 10.000000000000000000
+          Position.X = 334.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'additembutton'
+          TabOrder = 1
+          Text = 'btnAdicionar'
+          OnClick = btnAdicionarClick
+        end
+      end
+    end
+    object lstTarefas: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 392.000000000000000000
+      Size.Height = 479.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      StyleLookup = 'listviewstyle'
+      OnDeleteItem = lstTarefasDeleteItem
+      DeleteButtonText = 'Excluir'
+    end
+  end
+end

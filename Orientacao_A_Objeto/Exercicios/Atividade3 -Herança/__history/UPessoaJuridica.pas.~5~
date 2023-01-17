@@ -1,0 +1,39 @@
+unit UPessoaJuridica;
+
+interface
+
+uses
+  UPessoa;
+
+type
+
+  TPessoaJuridica = class(TPessoa)
+    private
+      FCNPJ: String;
+      FIE: String;
+
+    public
+
+      function GravarPessoa:Boolean; override;
+
+      function CNPJ_Valido: boolean;
+
+  end;
+
+implementation
+
+
+
+{ TPessoaJuridica }
+
+function TPessoaJuridica.CNPJ_Valido: boolean;
+begin
+
+end;
+
+function TPessoaJuridica.GravarPessoa: Boolean;
+begin
+
+end;
+
+end.

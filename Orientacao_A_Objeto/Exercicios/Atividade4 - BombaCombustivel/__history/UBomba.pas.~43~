@@ -1,0 +1,118 @@
+unit UBomba;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+  TBomba = class
+
+    private
+      FTipoCombustivel: String;
+      FValorLitro: Double;
+      FQuantidade: Double;
+
+    function GetQuantidade: Double;
+    function GetTipoCombustivel: String;
+    function GetValorLitro: Double;
+
+    procedure SetQuantidade(const Value: Double);
+    procedure SetTipoCombustivel(const Value: String);
+    procedure SetValorLitro(const Value: Double);
+
+    public
+
+      property TipoCombustivel : String read GetTipoCombustivel write SetTipoCombustivel;
+      property ValorLitro: Double read GetValorLitro write SetValorLitro;
+      property Quantidade: Double read GetQuantidade write SetQuantidade;
+
+      function AbastecerPorValor(const pValor: Double): Double;
+      function AbastecerPorLitro(const pValor: Double): Double;
+      procedure AlterarValor(const pValor : Double);
+      procedure AlterarCombustivel(const pValor: Integer);
+      procedure AlterarQuantidade(const pValor:Double);
+
+
+  end;
+
+implementation
+
+{ TBomba }
+
+function TBomba.AbastecerPorLitro(const pValor: double): Double;
+begin
+  if (pValor > FQuantidade)then
+    showMessage('Quantidade Insuficiente')
+  else
+    begin
+      FQuantidade:= FQuantidade - pValor;
+      Result:= pValor * FValorLitro;
+    end;
+end;
+
+function TBomba.AbastecerPorValor(const pValor: Double): Double;
+begin
+  if((pValor / FValorLitro) > FQuantidade) then
+    showMessage('Quantidade insuficiente')
+  else
+    begin
+      FQuantidade:= FQuantidade - (pValor / FValorLitro);
+      Result:= pValor / FValorLitro;
+    end;
+end;
+
+procedure TBomba.AlterarCombustivel(const pValor: Integer);
+begin
+  if pValor = 0 then
+    FTipoCombustivel:= 'Gasolina'
+  else if pValor = 1 then
+    FTipoCombustivel:= 'Alcool'
+  else
+    FTipoCombustivel:= 'Diesel';
+end;
+
+procedure TBomba.AlterarQuantidade(const pValor:Double);
+begin
+  if (pValor > 1000 )then
+    showMessage('Ultrapassou o limite do tanque')
+  else
+    FQuantidade:= pValor;
+end;
+
+procedure TBomba.AlterarValor(const pValor:Double);
+begin
+  FValorLitro:= pValor;
+end;
+
+function TBomba.GetQuantidade: Double;
+begin
+  Result:= FQuantidade;
+end;
+
+function TBomba.GetTipoCombustivel: String;
+begin
+  Result:= FTipoCombustivel;
+end;
+
+function TBomba.GetValorLitro: Double;
+begin
+  Result:= FValorLitro;
+end;
+
+procedure TBomba.SetQuantidade(const Value: Double);
+begin
+  FQuantidade:= Value;
+end;
+
+procedure TBomba.SetTipoCombustivel(const Value: String);
+begin
+  FTipoCombustivel := Value;
+end;
+
+procedure TBomba.SetValorLitro(const Value: Double);
+begin
+  FValorLitro:= Value;
+end;
+
+end.

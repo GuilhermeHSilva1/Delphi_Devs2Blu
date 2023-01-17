@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/19 19:07:12.000.120,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/19 19:07:39.000.429,C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/19 19:07:39.000.429,C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\UfrmPrincipal.fmx=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/12/19 19:07:51.000.524,C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\JogoDaVelha.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/12/19 20:24:24.000.530,=C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\Unit1.pas</Transaction>
+    <Transaction>2022/12/20 18:31:29.000.004,=C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\Unit1.pas</Transaction>
+    <Transaction>2022/12/20 18:31:35.000.034,C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\Unit1.pas=C:\Users\mysql\Documents\FireMonkey\Jogo da Velha\UJogoVelha.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="" Android64="RX8RB0CYSVF"/>
+	</ActiveMobileDevice>
+</BorlandProject>

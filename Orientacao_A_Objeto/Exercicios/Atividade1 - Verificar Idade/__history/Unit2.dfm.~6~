@@ -1,0 +1,109 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 195
+  ClientWidth = 492
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 21
+    Top = 24
+    Width = 40
+    Height = 16
+    Caption = 'Nome:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 19
+    Top = 51
+    Width = 46
+    Height = 16
+    Caption = 'Altura:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object label3: TLabel
+    Left = 53
+    Top = 78
+    Width = 129
+    Height = 16
+    Caption = 'Data de nascimento'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Shape1: TShape
+    Left = 217
+    Top = 8
+    Width = 17
+    Height = 177
+    Brush.Color = clScrollBar
+    ParentShowHint = False
+    ShowHint = False
+  end
+  object Edit1: TEdit
+    Left = 61
+    Top = 24
+    Width = 150
+    Height = 21
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 21
+    Top = 146
+    Width = 190
+    Height = 25
+    Caption = 'Registrar'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Edit2: TEdit
+    Left = 61
+    Top = 51
+    Width = 150
+    Height = 21
+    TabOrder = 2
+  end
+  object DatePicker1: TDatePicker
+    Left = 21
+    Top = 100
+    Width = 190
+    Date = 44844.000000000000000000
+    DateFormat = 'dd/MM/yyyy'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    TabOrder = 3
+  end
+  object Memo1: TMemo
+    Left = 240
+    Top = 23
+    Width = 244
+    Height = 147
+    Alignment = taCenter
+    ReadOnly = True
+    TabOrder = 4
+  end
+end
