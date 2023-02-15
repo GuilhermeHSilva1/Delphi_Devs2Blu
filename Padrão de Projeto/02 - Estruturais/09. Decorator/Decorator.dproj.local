@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/27 19:44:57.000.346,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/27 19:45:20.000.369,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/27 19:45:20.000.369,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/27 19:45:22.000.787,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Decorator.dproj</Transaction>
+    <Transaction>2023/01/27 19:46:54.000.839,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:47:23.000.798,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UInterfaceComponent.pas</Transaction>
+    <Transaction>2023/01/27 19:48:29.000.855,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:48:40.000.832,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UDecorator.pas</Transaction>
+    <Transaction>2023/01/27 19:48:44.000.205,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:48:54.000.314,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\UConcreteDecorator_.pas</Transaction>
+    <Transaction>2023/01/27 19:49:09.000.180,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\UConcreteDecorator_.pas=</Transaction>
+    <Transaction>2023/01/27 19:49:12.000.479,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:49:25.000.646,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_.pas</Transaction>
+    <Transaction>2023/01/27 19:49:30.000.604,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:49:41.000.023,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_U.pas</Transaction>
+    <Transaction>2023/01/27 19:49:45.000.959,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:49:57.000.187,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_D.pas</Transaction>
+    <Transaction>2023/01/27 19:50:09.000.437,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_U.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_Usuario.pas</Transaction>
+    <Transaction>2023/01/27 19:50:17.000.408,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_D.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_DataHora.pas</Transaction>
+    <Transaction>2023/01/27 19:50:28.000.653,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteDecorator_Windows.pas</Transaction>
+    <Transaction>2023/01/27 19:50:34.000.074,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:50:42.000.607,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\02 - Estruturais\09. Decorator\pattern\Decorator\UConcreteComponent.pas</Transaction>
+  </Transactions>
+</BorlandProject>

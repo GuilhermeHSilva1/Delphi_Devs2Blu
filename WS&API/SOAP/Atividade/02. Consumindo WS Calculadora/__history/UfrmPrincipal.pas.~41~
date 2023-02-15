@@ -1,0 +1,78 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    edtPrimeiroValor: TEdit;
+    btnSomar: TButton;
+    btnSubtrair: TButton;
+    btnMultiplicar: TButton;
+    btnDividir: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtSegundoValor: TEdit;
+    lblResultado: TLabel;
+    procedure btnSomarClick(Sender: TObject);
+    procedure btnSubtrairClick(Sender: TObject);
+    procedure btnMultiplicarClick(Sender: TObject);
+    procedure btnDividirClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure PegarValores;
+    var xValor1, xValor2: Double;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses ICalculadora1;
+
+procedure TForm2.btnDividirClick(Sender: TObject);
+begin
+  Self.PegarValores;
+  lblResultado.Caption := 'Resultado: ' + GetICalculadora.echoDividir(xValor1, xValor2);
+end;
+
+procedure TForm2.btnMultiplicarClick(Sender: TObject);
+begin
+  Self.PegarValores;
+  lblResultado.Caption := 'Resultado: ' + GetICalculadora.echoMultiplicar(xValor1, xValor2);
+end;
+
+procedure TForm2.btnSomarClick(Sender: TObject);
+begin
+  Self.PegarValores;
+  lblResultado.Caption := 'Resultado: ' + GetICalculadora.echoSomar(xValor1, xValor2);
+end;
+
+procedure TForm2.btnSubtrairClick(Sender: TObject);
+begin
+  Self.PegarValores;
+  lblResultado.Caption := 'Resultado: ' + GetICalculadora.echoSubtrair(xValor1, xValor2);
+end;
+
+procedure TForm2.PegarValores;
+begin
+
+  edtPrimeiroValor.Text := StringReplace(edtPrimeiroValor.Text '.', ',',
+  [rfReplaceAll, rfIgnoreCase])
+
+  if not TryStrToFloat(edtPrimeiroValor.Text, xValor1) then
+    raise Exception.Create('Primeiro Valor Invalido');
+
+  if not TryStrToFloat(edtSegundoValor.Text, xValor2) then
+    raise Exception.Create('Segundo Valor Invalido');
+end;
+
+end.

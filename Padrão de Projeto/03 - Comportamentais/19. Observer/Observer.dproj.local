@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/30 20:20:57.000.946,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/30 20:21:23.000.845,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/30 20:21:23.000.845,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/30 20:21:27.000.651,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Observer.dproj</Transaction>
+    <Transaction>2023/01/30 20:22:38.000.779,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:22:59.000.599,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\USubject.pas</Transaction>
+    <Transaction>2023/01/30 20:24:01.000.122,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:24:13.000.872,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UObserver.pas</Transaction>
+    <Transaction>2023/01/30 20:28:58.000.965,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:29:06.000.019,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UNotificacao.pas</Transaction>
+    <Transaction>2023/01/30 20:34:37.000.244,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:36:26.000.178,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteObserver_Log.dfm</Transaction>
+    <Transaction>2023/01/30 20:36:26.000.178,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteObserver_Log.pas</Transaction>
+    <Transaction>2023/01/30 21:03:16.000.000,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:03:37.000.242,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\UConcreteObserver_Saldo.dfm</Transaction>
+    <Transaction>2023/01/30 21:03:37.000.242,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\UConcreteObserver_Saldo.pas</Transaction>
+    <Transaction>2023/01/30 21:09:39.000.343,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteObserver_Saldo.pas</Transaction>
+    <Transaction>2023/01/30 21:22:13.000.621,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:22:32.000.625,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteOBserver_Historico.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:22:32.000.625,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteOBserver_Historico.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.dfm</Transaction>
+    <Transaction>2023/01/30 21:41:07.000.437,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:41:29.000.003,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteObserver_Subject.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:41:29.000.003,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\pattern\UConcreteObserver_Subject.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\19. Observer\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

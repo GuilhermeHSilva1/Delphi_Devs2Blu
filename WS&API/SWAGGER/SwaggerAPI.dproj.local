@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/07 19:32:17.000.515,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\SwaggerAPI.dproj</Transaction>
+    <Transaction>2023/02/07 19:32:27.000.013,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+    <Transaction>2023/02/07 19:33:04.000.311,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\models\entities\UPessoa.pas</Transaction>
+    <Transaction>2023/02/07 19:35:19.000.270,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+    <Transaction>2023/02/07 19:35:37.000.436,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\models\controllers\UController.Pessoa.pas</Transaction>
+    <Transaction>2023/02/07 21:26:58.000.102,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+    <Transaction>2023/02/07 21:27:04.000.814,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\models\entities\UCargo.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+    <Transaction>2023/02/07 21:27:07.000.859,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+    <Transaction>2023/02/07 21:27:15.000.663,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\models\controllers\UController.Cargo.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\SWAGGER\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

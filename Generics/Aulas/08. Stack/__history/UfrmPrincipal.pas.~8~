@@ -1,0 +1,42 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Generics.Collections;
+
+type
+  TfrmPrincipal = class(TForm)
+    btnPush: TButton;
+    btnPop: TButton;
+    btnExtract: TButton;
+    btnPeek: TButton;
+    btnTrimExcess: TButton;
+    btnCount: TButton;
+    btnCapacity: TButton;
+    Edit1: TEdit;
+    Memo1: TMemo;
+    procedure btnCapacityClick(Sender: TObject);
+
+  private
+    { Private declarations }
+    FPilha: TStack<String>;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TfrmPrincipal.btnCapacityClick(Sender: TObject);
+begin
+  Memo1.Lines.Add(FPilha.Capacity.ToString);
+end;
+
+end.

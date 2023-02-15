@@ -1,0 +1,65 @@
+unit UCalculadoraServico;
+
+interface
+
+uses ICalculadoraService;
+
+type
+
+  TEnumOperacao = (Somar, Subtrair, Dividir, Multiplicar);
+
+  TServicoCalculadora = class
+    private
+      FNum1, FNum2: Double;
+      FCalculadora: ICalculadora;
+    public
+      constructor Create(pNum1, pNum2: Double; pCalculadora: ICalculadora);
+      destructor Destroy; override;
+      function ProcessCalc(pTipoCalculo: TEnumOperacao): Double;
+
+  end;
+
+implementation
+
+{ TServicoCalculadora }
+
+
+
+{ TServicoCalculadora }
+
+constructor TServicoCalculadora.Create(pNum1, pNum2: Double;
+  pCalculadora: ICalculadora);
+begin
+  FNum1 := pNum1;
+  FNum2 := pNum2;
+  FCalculadora := pCalculadora;
+end;
+
+destructor TServicoCalculadora.Destroy;
+begin
+
+  inherited;
+end;
+
+function TServicoCalculadora.ProcessCalc(pTipoCalculo: TEnumOperacao): Double;
+begin
+
+  case pTipoCalculo of
+
+    Somar:
+      Result := FCalculadora.Somar(FNum1, FNum2);
+
+    Subtrair:
+      Result := FCalculadora.Subtrair(FNum1, FNum2);
+
+    Dividir:
+      Result := FCalculadora.Dividir(FNum1, FNum2);
+
+    Multiplicar:
+      Result := FCalculadora.Multiplicar(FNum1, FNum2) ;
+
+  end;
+
+end;
+
+end.

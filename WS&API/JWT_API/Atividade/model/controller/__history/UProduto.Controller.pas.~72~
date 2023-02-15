@@ -1,0 +1,99 @@
+unit UProduto.Controller;
+
+interface
+
+uses
+  Horse,
+  GBSwagger.Path.Attributes,
+  UProduto;
+
+type
+  [SwagPath('produtos', 'produtos')]
+  TProdutoController = class
+    private
+      FReq: THorseRequest;
+      FRes: THorseResponse;
+    public
+
+    constructor create(Req: THorseRequest; Res: THorseResponse);
+
+    [SwagGet('Listar Produtos'), True]
+    //[SwagParamQuery('id', 'ID do Produto')]
+    [SwagResponse(200, TProduto, 'Informações do produto', True)]
+    class procedure GetProdutos(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+    [SwagPOST('Adicionar novo Produto')]
+    [SwagParamBody('Informações do Produto', TProduto)]
+    [SwagResponse(201, TProduto)]
+    [SwagResponse(400)]
+    class procedure PostProdutos(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+    [SwagDelete('{id}', 'Deletar um produto')]
+    [SwagParamPath('ID', 'ID do produto')]
+    [SwagResponse(204)]
+    [SwagResponse(400)]
+    [SwagResponse(404)]
+    class procedure DeleteProduto(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+  end;
+
+implementation
+
+{ TProdutoController }
+
+uses UDadosGerais, System.JSON, System.SysUtils;
+
+constructor TProdutoController.create(Req: THorseRequest; Res: THorseResponse);
+begin
+
+end;
+
+class procedure TProdutoController.DeleteProduto(Req: THorseRequest;
+  Res: THorseResponse; Next: TProc);
+var
+  xId: Integer;
+  xDadosPessoas: TDadosGerais;
+begin
+  xDadosPessoas := TDadosGerais.Create('Produtos.json');
+  try
+    xId := Req.Params.Items['id'].ToInteger;
+
+    if xDadosPessoas.RemoverRegistro(xId) then
+      Res.Status(THTTPStatus.NoContent)
+    else
+      Res.Status(THTTPStatus.InternalServerError);
+    finally
+      xDadosPessoas.Free;
+  end;
+end;
+
+class procedure TProdutoController.GetProdutos(Req: THorseRequest;
+  Res: THorseResponse; Next: TProc);
+var
+  xDadosPessoas: TDadosGerais;
+begin
+  xDadosPessoas := TDadosGerais.Create('Produtos.json');
+  try
+    Res.Send<TJSONArray>(xDadosPessoas.JSON);
+  finally
+    xDadosPessoas.Free;
+  end;
+end;
+
+class procedure TProdutoController.PostProdutos(Req: THorseRequest;
+  Res: THorseResponse; Next: TProc);
+var
+  xDadosPessoas: TDadosGerais;
+begin
+  xDadosPessoas := TDadosGerais.Create('Produtos.json');
+  try
+    if xDadosPessoas.AdicionarRegistro(Req.Body<TJSONObject>) then
+      Res.Status(THTTPStatus.OK)
+    else
+      Res.Status(THTTPStatus.InternalServerError);
+    finally
+      xDadosPessoas.Free;
+  end;
+end;
+
+end.

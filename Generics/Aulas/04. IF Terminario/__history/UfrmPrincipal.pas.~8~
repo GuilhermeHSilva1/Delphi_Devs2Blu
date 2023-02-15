@@ -1,0 +1,66 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+
+  TUtils = class
+    class function IIF<T>(const aCondicao: Boolean; const aTipo1, aTipo2: T): T;
+  end;
+
+  {TProduto = class
+  private
+    FDescricao: String;
+    procedure SetDescricao(const Value: String);
+  published
+    constructor Create;
+    property Descricao: String read FDescricao write SetDescricao;}
+
+  TfrmPrincipal = class(TForm)
+    btn: TButton;
+    btn2: TButton;
+    edt: TEdit;
+    procedure btnClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+{ TUtils }
+
+class function TUtils.IIF<T>(const aCondicao: Boolean; const aTipo1,
+  aTipo2: T): T;
+begin
+  if aCondicao then
+    Result := aTipo1
+  else
+    Result := aTipo2;
+end;
+
+procedure TfrmPrincipal.btnClick(Sender: TObject);
+var
+  xAux: String;
+begin
+  {if edt.Text <> EmptyStr then
+    xAux := edt.text
+  else
+    xAux := 'Laranja';}
+
+  xAux := TUtils.IIF<String>(edt.Text <> EmptyStr, edt.Text, 'Laranja');
+
+  showMessage(xAux);
+end;
+
+end.

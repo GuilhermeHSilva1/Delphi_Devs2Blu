@@ -1,0 +1,47 @@
+unit URentalService;
+
+interface
+
+uses UBrazilTaxService, UCarRental;
+
+type
+  TRentalService = class
+    private
+      FPricePerDay: Double;
+      FPricePerHour: Double;
+
+      FTaxService: TBrazilTaxService;
+    public
+      constructor Create(const aPricePerDay, aPricePerHour: Double; aTaxService: TBrazilTaxService);
+      destructor Destroy; override;
+
+      procedure ProcessInvoice(aCarRental: TCarRental);
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TRentalService }
+
+constructor TRentalService.Create(const aPricePerDay, aPricePerHour: Double;
+  aTaxService: TBrazilTaxService);
+begin
+  FPricePerDay := aPricePerDay;
+  FPricePerHour := aPricePerHour;
+  FTaxService := aTaxService;
+end;
+
+destructor TRentalService.Destroy;
+begin
+  FreeAndNil(TRentalService);
+  inherited;
+end;
+
+procedure TRentalService.ProcessInvoice(aCarRental: TCarRental);
+begin
+
+end;
+
+end.

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9F89F8D5-CAD6-47B9-A81B-4E10191F1508}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Pedido.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\PedidoTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Pedido">
+        <MSBuild Projects="Pedido.dproj"/>
+    </Target>
+    <Target Name="Pedido:Clean">
+        <MSBuild Projects="Pedido.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pedido:Make">
+        <MSBuild Projects="Pedido.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PedidoTests">
+        <MSBuild Projects="Test\PedidoTests.dproj"/>
+    </Target>
+    <Target Name="PedidoTests:Clean">
+        <MSBuild Projects="Test\PedidoTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PedidoTests:Make">
+        <MSBuild Projects="Test\PedidoTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Pedido;PedidoTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Pedido:Clean;PedidoTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Pedido:Make;PedidoTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

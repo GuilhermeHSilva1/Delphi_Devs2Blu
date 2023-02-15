@@ -1,0 +1,67 @@
+unit UPrazoAnual;
+
+interface
+
+uses UTipoPrazo;
+
+type
+  TPrazoAnual = Class(TInterfacedObject, ITipoPrazo)
+    private
+      FValorTotal: Real;
+    public
+          function ConstularDescricao: String;
+    function ConsultarJuros: String;
+    function ConsultarProjecao(const aValor: Real;
+      const aQtdParcelas: Integer): String;
+    function ConsultarTotal: String;
+  End;
+
+implementation
+
+uses
+  System.SysUtils, System.Classes;
+
+{ TPrazoAnual }
+
+function TPrazoAnual.ConstularDescricao: String;
+begin
+  Result := 'Prazo Anual para Pagamento';
+end;
+
+function TPrazoAnual.ConsultarJuros: String;
+begin
+  Result := 'Juros de 10,5% simples ao ano' + sLineBreak;
+end;
+
+function TPrazoAnual.ConsultarProjecao(const aValor: Real;
+  const aQtdParcelas: Integer): String;
+var
+  xProjecao : TStringList;
+  xContador: smallint;
+  xValorAjustado: Real;
+  xDataParcela: TDateTime;
+begin
+  xValorAjustado := aValor;
+  xDataParcela   := Date;
+  xProjecao      := TStringList.Create;
+
+  try
+    for xContador := 1 to aQtdParcelas do
+    begin
+      xValorAjustado := xValorAjustado + (aValor * 0.105);
+      xDataParcela   := IncMonth(xDataParcela, 12);
+
+      xProjecao.Add(Format('Parcela %.2d (%s): %m',
+        [xContador, DateToStr(xDataParcela), xValorAjustado]));
+    end;
+  finally
+
+  end;
+end;
+
+function TPrazoAnual.ConsultarTotal: String;
+begin
+
+end;
+
+end.

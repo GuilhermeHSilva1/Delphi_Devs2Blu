@@ -1,0 +1,51 @@
+unit UDAO.UnidadeMedida;
+
+interface
+
+uses
+  System.JSON,
+  UDAO.Intf,
+  UUtil.Banco,
+  System.SysUtils;
+
+type
+  TDaoUnidadeMedida = class(TInterfacedObject, IDAOUNIDADE)
+    function ObterRegistros: TJSonArray;
+    function ProcurarPorID(const aIdentificador: Integer): TJSONObject;
+    function AdicionarRegistro(aRegistro: TJSONObject): Boolean;
+    function DeletarRegistro(const aIdentificador: Integer): Boolean;
+  end;
+
+implementation
+
+{ TDaoUnidadeMedida }
+
+function TDaoUnidadeMedida.AdicionarRegistro(aRegistro: TJSONObject): Boolean;
+begin
+  try
+    Result := TUtilBanco.AdicionarRegistro('UNIDADEMEDIDA', aRegistro.ToJSON);
+  except on E: Exception do
+    raise Exception.Create('Erro ao adicionar unidade');
+  end;
+end;
+
+function TDaoUnidadeMedida.DeletarRegistro(const aIdentificador: Integer): Boolean;
+begin
+  try
+    Result := TUtilBanco.RemoverRegistro('UNIDADEMEDIDA', aIdentificador);
+  except on E: Exception do
+    raise Exception.Create('Erro ao Remover Registro: ' + E.Message);
+  end;
+end;
+
+function TDaoUnidadeMedida.ObterRegistros: TJSonArray;
+begin
+
+end;
+
+function TDaoUnidadeMedida.ProcurarPorID(const aIdentificador: Integer): TJSONObject;
+begin
+
+end;
+
+end.

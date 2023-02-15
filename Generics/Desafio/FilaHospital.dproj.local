@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/18 19:36:44.000.301,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/18 19:37:09.000.412,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/18 19:37:09.000.412,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/18 19:37:15.000.656,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\FilaHospital.dproj</Transaction>
+    <Transaction>2023/01/18 19:55:25.000.004,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:56:27.000.733,C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Desafio\UPessoa.pas</Transaction>
+  </Transactions>
+</BorlandProject>

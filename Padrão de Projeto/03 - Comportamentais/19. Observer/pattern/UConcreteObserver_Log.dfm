@@ -1,0 +1,21 @@
+object fraLog: TfraLog
+  Left = 0
+  Top = 0
+  Width = 391
+  Height = 198
+  TabOrder = 0
+  object label1: TLabel
+    Left = 160
+    Top = 3
+    Width = 85
+    Height = 13
+    Caption = 'Log de opera'#231#245'es'
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 22
+    Width = 391
+    Height = 177
+    TabOrder = 0
+  end
+end

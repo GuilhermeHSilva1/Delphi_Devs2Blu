@@ -1,0 +1,30 @@
+program Projeto;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  UVehicle in 'Model\Entities\UVehicle.pas',
+  UCarRental in 'Model\Entities\UCarRental.pas',
+  UInvoice in 'Model\Entities\UInvoice.pas',
+  UBrazilTaxService in 'Model\Services\UBrazilTaxService.pas',
+  URentalService in 'Model\Services\URentalService.pas';
+
+var
+  xCarModel: String;
+  xStrStart, xStrFinish: STring;
+  xStart, xFinish: TDateTime;
+  xCarRental: TCarRental;
+  xStrPricePerHour, xStrPricePerDay: String;
+  xPricePerHour, xPricePerDay: Double;
+  xRentalService: TRentalService;
+begin
+  try
+    { TODO -oUser -cConsole Main : Insert code here }
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

@@ -1,0 +1,143 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Dictionary'
+  ClientHeight = 381
+  ClientWidth = 514
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 176
+    Top = 18
+    Width = 19
+    Height = 13
+    Caption = 'CPF'
+  end
+  object Label2: TLabel
+    Left = 319
+    Top = 18
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object edtCpf: TEdit
+    Left = 176
+    Top = 37
+    Width = 137
+    Height = 21
+    TabOrder = 0
+  end
+  object edtNome: TEdit
+    Left = 319
+    Top = 37
+    Width = 178
+    Height = 21
+    TabOrder = 1
+  end
+  object btnAdd: TButton
+    Left = 32
+    Top = 25
+    Width = 121
+    Height = 25
+    Caption = 'Add'
+    TabOrder = 2
+    OnClick = btnAddClick
+  end
+  object btnTryGetValue: TButton
+    Left = 32
+    Top = 56
+    Width = 121
+    Height = 25
+    Caption = 'TryGetValue'
+    TabOrder = 3
+  end
+  object btnRemove: TButton
+    Left = 32
+    Top = 87
+    Width = 121
+    Height = 25
+    Caption = 'Remove'
+    TabOrder = 4
+  end
+  object btnTrimExcess: TButton
+    Left = 32
+    Top = 118
+    Width = 121
+    Height = 25
+    Caption = 'TrimExcess'
+    TabOrder = 5
+  end
+  object btnContainKey: TButton
+    Left = 32
+    Top = 149
+    Width = 121
+    Height = 25
+    Caption = 'ContainKey'
+    TabOrder = 6
+  end
+  object btnAddOrSetValue: TButton
+    Left = 32
+    Top = 180
+    Width = 121
+    Height = 25
+    ParentCustomHint = False
+    Caption = 'AddOrSetValue'
+    TabOrder = 7
+    OnClick = btnAddOrSetValueClick
+  end
+  object btnListaValue: TButton
+    Left = 32
+    Top = 242
+    Width = 121
+    Height = 25
+    Caption = 'Lista Value'
+    TabOrder = 8
+  end
+  object btnClear: TButton
+    Left = 32
+    Top = 273
+    Width = 121
+    Height = 25
+    Caption = 'Clear'
+    TabOrder = 9
+    OnClick = btnClearClick
+  end
+  object btnOnKeyNotify: TButton
+    Left = 32
+    Top = 304
+    Width = 121
+    Height = 25
+    Caption = 'OnKeyNotify'
+    TabOrder = 10
+  end
+  object btnOnValueNotify: TButton
+    Left = 32
+    Top = 335
+    Width = 121
+    Height = 25
+    Caption = 'OnValueNotify'
+    TabOrder = 11
+  end
+  object btnListaKey: TButton
+    Left = 32
+    Top = 211
+    Width = 121
+    Height = 25
+    Caption = 'Lista Key'
+    TabOrder = 12
+  end
+  object Memo1: TMemo
+    Left = 176
+    Top = 64
+    Width = 321
+    Height = 296
+    TabOrder = 13
+  end
+end

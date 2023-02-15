@@ -1,0 +1,30 @@
+unit UApple;
+
+interface
+
+uses UInterface;
+
+type
+  TApple = class(TInterfacedObject, IFactoryMarca)
+    function ConsultarNotebook: INotebook;
+    function ConsultarDesktop:  IDesktop;
+end;
+
+implementation
+
+{ TApple }
+
+uses
+ UMacBook ,UIMac;
+
+function TApple.ConsultarDesktop: IDesktop;
+begin
+  Result := TIMac.Create;
+end;
+
+function TApple.ConsultarNotebook: INotebook;
+begin
+  Result := TMacBook.Create;
+end;
+
+end.

@@ -1,0 +1,69 @@
+program Atividade;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Horse,
+  Horse.BasicAuthentication,
+  Horse.Jhonson,
+  Horse.GBSwagger,
+  Horse.CORS,
+  System.SysUtils,
+  System.JSON,
+  UProduto in 'model\entities\UProduto.pas',
+  UProduto.Controller in 'model\controller\UProduto.Controller.pas',
+  UDadosGerais in 'model\service\UDadosGerais.pas';
+
+procedure SwaggerConfig;
+begin
+  //Programação Funcional
+  //Usa Interfaces
+  Swagger
+    .Register
+      .SchemaOnError(TAPIError)
+    .&End
+    .Info
+      .Title('Minha API de produtos')
+      .Description('API Horse')
+      .Contact
+        .Name('Guilherme H')
+        .Email('email@gmail.com')
+        .URL('http://www.mypage.com.br')
+      .&End
+    .&End
+    .BasePath('v1');
+end;
+
+procedure Registry;
+begin
+  THorse.Group.Prefix('v1')
+    .Get('/produtoss', TProdutoController.GetProdutos)
+    .Post('/produtos', TProdutoController.PostProdutos)
+    .Delete('/produtos/:id', TProdutoController.DeleteProduto)
+end;
+
+
+begin
+
+  THorse.Use(HorseBasicAuthentication(
+  function(const aUserName, aPassWord: String ): Boolean
+  begin
+    Result := aUserName.Equals('admin') and aPassWord.Equals('admin');
+  end));
+
+  THorse
+    .Use(Jhonson())
+    .Use(HorseSwagger);
+
+    //http://localhost:9090/swagger/doc/html
+    SwaggerConfig;
+    THorseGBSwaggerRegister.RegisterPath(TProdutoController);
+
+    Registry;
+
+  THorse.Listen(8080,
+    procedure(Horse: THorse)
+    begin
+      Writeln('Server is runing on port ' + IntToStr(Horse.Port));
+    end);
+end.

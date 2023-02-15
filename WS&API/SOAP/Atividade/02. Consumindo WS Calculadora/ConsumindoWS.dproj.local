@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/03 19:40:42.000.263,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/02/03 19:41:36.000.476,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/02/03 19:41:36.000.476,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/02/03 19:41:44.000.446,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ConsumindoWS.dproj</Transaction>
+    <Transaction>2023/02/03 19:47:16.000.926,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ICalculadora1.pas</Transaction>
+    <Transaction>2023/02/03 19:47:23.000.734,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ICalculadora1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ICalculadora.pas</Transaction>
+    <Transaction>2023/02/03 19:47:36.000.904,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ICalculadora.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Atividade\02. Consumindo WS Calculadora\ICalculadora1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

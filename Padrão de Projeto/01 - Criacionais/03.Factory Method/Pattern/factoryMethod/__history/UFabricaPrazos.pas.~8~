@@ -1,0 +1,22 @@
+unit UFabricaPrazos;
+
+interface
+
+uses UTipoPrazo, UPrazoAnual, UPrazoMensal;
+
+type
+  TConsultarPrazo = class(TInterfacedObject, IFactoryMethod)
+    function ConsultarPrazo(const aPrazo: String): ITipoPrazo;
+  end;
+
+
+implementation
+
+{ TConsultarPrazo }
+
+function TConsultarPrazo.ConsultarPrazo(const aPrazo: String): ITipoPrazo;
+begin
+
+end;
+
+end.

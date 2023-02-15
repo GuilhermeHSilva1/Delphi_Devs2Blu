@@ -1,0 +1,118 @@
+unit UUtils;
+
+interface
+
+uses
+  Horse;
+
+type
+  TUtils = class
+    private
+      class procedure TestarParametros(Req: THorseRequest; Res: THorseResponse; var aValor1, aValor2: Double);
+    public
+      class procedure Somar(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+      class procedure Subtrair(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+      class procedure Multiplicar(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+      class procedure Dividir(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+  end;
+
+implementation
+
+{ TUtils }
+
+uses ICalcular, UCalculadora, System.SysUtils;
+
+class procedure TUtils.TestarParametros(Req: THorseRequest; Res: THorseResponse; var aValor1, aValor2: Double);
+begin
+  if Req.Params.Count <> 2 then
+  begin
+    Res.Send('Parâmetros Incorretos!');
+    Abort;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor1'], aValor1) then
+  begin
+    Res.Send('Valor 1 Incorreto!');
+    Abort;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor2'], aValor2) then
+  begin
+    Res.Send('Valor 2 Incorreto!');
+    Abort;
+  end;
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+
+class procedure TUtils.Somar(Req: THorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  xCalculadora: ICalculadora;
+  xResultado: Double;
+  xValor1, xValor2: Double;
+begin
+
+  Self.TestarParametros(Req, Res, xValor1, xValor2);
+
+  xCalculadora := TCalculadora.Create;
+  xResultado   := xCalculadora.Somar(xValor1, xValor2);
+
+  Res.Send('Soma: ' + xResultado.ToString);
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+
+class procedure TUtils.Dividir(Req: THorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  xCalculadora: ICalculadora;
+  xResultado: Double;
+  xValor1, xValor2: Double;
+begin
+
+  Self.TestarParametros(Req, Res, xValor1, xValor2);
+
+  xCalculadora := TCalculadora.Create;
+  xResultado   := xCalculadora.Dividir(xValor1, xValor2);
+
+  Res.Send('Divisão: ' + xResultado.ToString);
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+
+class procedure TUtils.Subtrair(Req: THorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  xCalculadora: ICalculadora;
+  xResultado: Double;
+  xValor1, xValor2: Double;
+begin
+
+  Self.TestarParametros(Req, Res, xValor1, xValor2);
+
+  xCalculadora := TCalculadora.Create;
+  xResultado   := xCalculadora.Subtrair(xValor1, xValor2);
+
+  Res.Send('Subtração: ' + xResultado.ToString);
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+
+class procedure TUtils.Multiplicar(Req: THorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  xCalculadora: ICalculadora;
+  xResultado: Double;
+  xValor1, xValor2: Double;
+begin
+
+  Self.TestarParametros(Req, Res, xValor1, xValor2);
+
+  xCalculadora := TCalculadora.Create;
+  xResultado   := xCalculadora.Multiplicar(xValor1, xValor2);
+
+  Res.Send('Multiplicação: ' + xResultado.ToString);
+end;
+
+end.

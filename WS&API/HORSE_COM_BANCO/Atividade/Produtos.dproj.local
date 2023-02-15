@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/13 19:40:43.000.437,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Produtos.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2023/02/13 19:44:49.000.994,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 19:45:18.000.640,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\model\utils\UUtil.Banco.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 19:47:40.000.390,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 19:47:56.000.648,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\model\DAO\UDAO.Produtos.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 19:48:02.000.007,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 19:48:21.000.286,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\model\Controllers\UController.Produtos.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 20:51:30.000.311,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/13 20:52:52.000.313,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\model\DAO\UDAO.Intf.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Aulas\CRUD\Unit1.pas</Transaction>
+    <Transaction>2023/02/14 19:11:08.000.763,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\Unit1.pas</Transaction>
+    <Transaction>2023/02/14 19:11:21.000.443,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\model\DAO\UDAO.UnidadeMedida.pas</Transaction>
+    <Transaction>2023/02/14 19:11:37.000.413,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\Unit1.pas</Transaction>
+    <Transaction>2023/02/14 19:11:47.000.611,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\HORSE_COM_BANCO\Atividade\model\Controllers\UController.UnidadeMedida.pas</Transaction>
+  </Transactions>
+</BorlandProject>

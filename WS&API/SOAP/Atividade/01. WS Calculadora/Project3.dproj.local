@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/01 19:51:38.000.988,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:51:39.000.246,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:51:49.000.944,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\CalculadoraImpl.pas</Transaction>
+    <Transaction>2023/02/01 19:51:50.000.017,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\CalculadoraIntf.pas</Transaction>
+    <Transaction>2023/02/01 19:52:13.000.563,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\CalculadoraIntf.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\CalculadoraIntf.pas</Transaction>
+    <Transaction>2023/02/01 19:52:14.000.504,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\CalculadoraImpl.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\CalculadoraImpl.pas</Transaction>
+    <Transaction>2023/02/01 19:52:15.000.530,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\FormUnit1.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:52:15.000.530,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\FormUnit1.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 19:52:16.000.313,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\WebModuleUnit1.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 19:52:16.000.313,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\WebModuleUnit1.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:52:17.000.061,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Atividade\01\Project3.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

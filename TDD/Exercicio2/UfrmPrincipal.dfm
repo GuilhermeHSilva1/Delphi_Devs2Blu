@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Pedido'
-  ClientHeight = 265
-  ClientWidth = 352
+  ClientHeight = 199
+  ClientWidth = 332
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

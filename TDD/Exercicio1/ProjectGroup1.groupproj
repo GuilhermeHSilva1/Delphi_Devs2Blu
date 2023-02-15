@@ -1,12 +1,12 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{1865988A-528E-43CA-8C82-F6F549E3C5E1}</ProjectGuid>
+        <ProjectGuid>{97CF9825-52A3-4AA1-9B0C-B0BCBFC2E4B9}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="Project1.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\..\..\Documents\Embarcadero\Studio\Projects\Project2.dproj">
+        <Projects Include="Test\CalculadoraTeste1.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -26,23 +26,23 @@
     <Target Name="Project1:Make">
         <MSBuild Projects="Project1.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Project2">
-        <MSBuild Projects="..\..\..\Documents\Embarcadero\Studio\Projects\Project2.dproj"/>
+    <Target Name="CalculadoraTeste1">
+        <MSBuild Projects="Test\CalculadoraTeste1.dproj"/>
     </Target>
-    <Target Name="Project2:Clean">
-        <MSBuild Projects="..\..\..\Documents\Embarcadero\Studio\Projects\Project2.dproj" Targets="Clean"/>
+    <Target Name="CalculadoraTeste1:Clean">
+        <MSBuild Projects="Test\CalculadoraTeste1.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Project2:Make">
-        <MSBuild Projects="..\..\..\Documents\Embarcadero\Studio\Projects\Project2.dproj" Targets="Make"/>
+    <Target Name="CalculadoraTeste1:Make">
+        <MSBuild Projects="Test\CalculadoraTeste1.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="Project1;Project2"/>
+        <CallTarget Targets="Project1;CalculadoraTeste1"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Project1:Clean;Project2:Clean"/>
+        <CallTarget Targets="Project1:Clean;CalculadoraTeste1:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Project1:Make;Project2:Make"/>
+        <CallTarget Targets="Project1:Make;CalculadoraTeste1:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

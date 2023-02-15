@@ -1,0 +1,77 @@
+unit UConcreteCommand;
+
+interface
+
+uses
+  UCommand, UReceiver;
+
+type
+  TProcessos = class(TInterfacedObject, ICommand)
+    private
+      FReceiver: TReceiver;
+
+    public
+      constructor Create(aReceiver: TReceiver);
+
+      procedure Execute;
+  end;
+
+  TProgramas = class(TInterfacedObject, Icommand)
+    private
+      FReceiver: TReceiver;
+
+    public
+      constructor Create(aReceiver: TReceiver);
+
+      procedure Execute;
+  end;
+
+  TVariaveisAmbiente = Class(TInterfacedObject, Icommand)
+    private
+      FReceiver: TReceiver;
+
+    public
+      constructor Create(aReceiver: TReceiver);
+
+      procedure Execute;
+  End;
+
+implementation
+
+{ TProcessos }
+
+constructor TProcessos.Create(aReceiver: TReceiver);
+begin
+
+end;
+
+procedure TProcessos.Execute;
+begin
+
+end;
+
+{ TProgramas }
+
+constructor TProgramas.Create(aReceiver: TReceiver);
+begin
+
+end;
+
+procedure TProgramas.Execute;
+begin
+
+end;
+
+{ TVariaveisAmbiente }
+
+constructor TVariaveisAmbiente.Create(aReceiver: TReceiver);
+begin
+
+end;
+
+procedure TVariaveisAmbiente.Execute;
+begin
+
+end;
+
+end.

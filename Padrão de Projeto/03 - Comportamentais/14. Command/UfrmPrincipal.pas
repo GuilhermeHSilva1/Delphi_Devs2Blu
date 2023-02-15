@@ -1,0 +1,62 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    btnExecutar: TButton;
+    memoProgramas: TMemo;
+    memoProcessos: TMemo;
+    memoVariaveis: TMemo;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    procedure btnExecutarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses UInvoker, UReceiver, UConcreteCommand;
+
+procedure TfrmPrincipal.btnExecutarClick(Sender: TObject);
+var
+  xReceiver: TReceiver;
+  xInvoker : TInvoker;
+begin
+
+  xReceiver := TReceiver.Create;
+
+  xInvoker := TInvoker.Create;
+  try
+    xInvoker.Add(TProgramas.Create(xReceiver));
+
+    xInvoker.Add(TProcessos.Create(xReceiver));
+
+    xInvoker.Add(TVariaveisAmbiente.Create(xReceiver));
+
+    xInvoker.ExtrairInformacoes;
+  finally
+    FreeAndNil(xInvoker);
+    FreeAndNil(xReceiver);
+  end;
+
+  MemoProgramas.Lines.LoadFromFile(GetCurrentDir + '\Programas.txt');
+  memoProcessos.Lines.LoadFromFile(GetCurrentDir + '\Processos.txt');
+  memoVariaveis.Lines.LoadFromFile(GetCurrentDir + '\Variaveis.txt');
+
+end;
+
+end.

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/24 21:49:38.000.649,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/24 21:49:48.000.126,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\frmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/01/24 21:49:48.000.126,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\frmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/24 21:49:52.000.497,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\FactoryMethod.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2023/01/24 21:50:11.000.209,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\frmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/24 21:50:11.000.209,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\UfrmPrincipal.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\frmPrincipal.pas</Transaction>
+    <Transaction>2023/01/25 18:25:13.000.709,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 18:25:40.000.186,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Pattern\factoryMethod\UTipoPrazo.pas</Transaction>
+    <Transaction>2023/01/25 18:27:14.000.277,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 18:27:25.000.403,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Pattern\factoryMethod\UPrazoMensal.pas</Transaction>
+    <Transaction>2023/01/25 18:27:28.000.428,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 18:27:37.000.807,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Pattern\factoryMethod\UPrazoAnual.pas</Transaction>
+    <Transaction>2023/01/25 18:27:42.000.088,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 18:27:53.000.805,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\01 - Criacionais\03.Factory Method\Pattern\factoryMethod\UFabricaPrazos.pas</Transaction>
+  </Transactions>
+</BorlandProject>

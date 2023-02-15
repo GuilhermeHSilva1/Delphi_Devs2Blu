@@ -1,0 +1,90 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    edtCEP: TEdit;
+    btnConsultarCEP: TButton;
+    btnConsultarCorreio: TButton;
+    Label1: TLabel;
+    lblLogradouro: TLabel;
+    lblBairro: TLabel;
+    lblCidade: TLabel;
+    procedure btnConsultarCEPClick(Sender: TObject);
+    procedure btnConsultarCorreioClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses UInterfaceViaCEP, UTarget, UWebServiceViaCEP, UAdaptee, UAdapter;
+
+procedure TfrmPrincipal.btnConsultarCEPClick(Sender: TObject);
+var
+  xWebServiceViaCEP : IWebServiceViaCEP;
+  xComunicador : TComunicador;
+  xRetorno : TStringList;
+begin
+  xWebServiceViaCEP := TWebServiceViaCEP.Create;
+
+  xComunicador := TComunicador.Create(xWebServiceViaCEP);
+
+  xRetorno := TStringList.Create;
+
+  try
+    xRetorno := xComunicador.ConsultarEndereco(edtCEP.Text);
+
+    lblLogradouro.Caption := xRetorno.Values['Logradouro'];
+    lblBairro.Caption     := xRetorno.Values['Bairro'];
+    lblCidade.Caption     := xRetorno.Values['Cidade'];
+
+  finally
+    FreeAndNil(xRetorno);
+    FreeAndNil(xComunicador);
+  end;
+end;
+
+procedure TfrmPrincipal.btnConsultarCorreioClick(Sender: TObject);
+var
+  xWebServiceCorreios: TWebServiceCorreios;
+  xAdapter: IWebServiceViaCep;
+  xComunicador: TComunicador;
+  xRetorno: TStringList;
+begin
+  //Instancia o objeto de consulta dos Correios (Adaptee)
+  xWebServiceCorreios := TWebServiceCorreios.Create;
+
+  xAdapter := TAdapter.Create(xWebServiceCorreios);
+
+  xComunicador := TComunicador.Create(xAdapter);
+
+  xRetorno := TStringList.Create;
+
+  try
+
+    xRetorno := xComunicador.ConsultarEndereco(edtCEP.Text);
+
+    lblLogradouro.Caption := xRetorno.Values['Logradouro'];
+    lblBairro.Caption := xRetorno.Values['Bairro'];
+    lblCidade.Caption := xRetorno.Values['Cidade'];
+  finally
+    FreeAndNil(xRetorno);
+    FreeAndNil(xComunicador);
+    FreeAndNil(xWebServiceCorreios);
+  end;
+end;
+
+end.

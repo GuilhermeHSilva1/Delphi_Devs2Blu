@@ -1,0 +1,24 @@
+unit UUSATaxService;
+
+interface
+
+uses UTaxService;
+
+type
+  TUSATaxService = class(TInterfacedObject, ITaxService)
+    private
+
+    public
+      function Tax(const aAmount: Double): Double;
+  end;
+
+implementation
+
+{ TUSATaxService }
+
+function TUSATaxService.Tax(const aAmount: Double): Double;
+begin
+
+end;
+
+end.

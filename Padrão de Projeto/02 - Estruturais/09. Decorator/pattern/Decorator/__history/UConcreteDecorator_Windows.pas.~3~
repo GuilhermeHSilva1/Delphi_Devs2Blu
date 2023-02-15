@@ -1,0 +1,30 @@
+unit UConcreteDecorator_Windows;
+
+interface
+
+uses
+  UDecorator;
+
+type
+  TWindowsDecorator = class(TDecorator)
+    private
+      function ObterVersaoWindows: String;
+    protected
+      function ObterDadosExcecao: String; Override;
+  end;
+
+implementation
+
+{ TWindowsDecorator }
+
+function TWindowsDecorator.ObterDadosExcecao: String;
+begin
+
+end;
+
+function TWindowsDecorator.ObterVersaoWindows: String;
+begin
+
+end;
+
+end.

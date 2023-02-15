@@ -1,0 +1,92 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'TQueue'
+  ClientHeight = 310
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnPush: TButton
+    Left = 24
+    Top = 48
+    Width = 121
+    Height = 25
+    Caption = 'Push'
+    TabOrder = 0
+    OnClick = btnPushClick
+  end
+  object btnPop: TButton
+    Left = 24
+    Top = 79
+    Width = 121
+    Height = 25
+    Caption = 'Pop'
+    TabOrder = 1
+    OnClick = btnPopClick
+  end
+  object btnExtract: TButton
+    Left = 24
+    Top = 113
+    Width = 121
+    Height = 25
+    Caption = 'Extract'
+    TabOrder = 2
+    OnClick = btnExtractClick
+  end
+  object btnPeek: TButton
+    Left = 24
+    Top = 144
+    Width = 121
+    Height = 25
+    Caption = 'Peek'
+    TabOrder = 3
+    OnClick = btnPeekClick
+  end
+  object btnTrimExcess: TButton
+    Left = 24
+    Top = 175
+    Width = 121
+    Height = 25
+    Caption = 'TrimExcess'
+    TabOrder = 4
+  end
+  object btnCount: TButton
+    Left = 24
+    Top = 206
+    Width = 121
+    Height = 25
+    Caption = 'Count'
+    TabOrder = 5
+    OnClick = btnCountClick
+  end
+  object btnCapacity: TButton
+    Left = 24
+    Top = 237
+    Width = 121
+    Height = 25
+    Caption = 'Capacity'
+    TabOrder = 6
+    OnClick = btnCapacityClick
+  end
+  object Edit1: TEdit
+    Left = 24
+    Top = 21
+    Width = 121
+    Height = 21
+    TabOrder = 7
+  end
+  object Memo1: TMemo
+    Left = 169
+    Top = 21
+    Width = 224
+    Height = 241
+    TabOrder = 8
+  end
+end

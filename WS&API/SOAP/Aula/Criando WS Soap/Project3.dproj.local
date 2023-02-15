@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/01 19:34:31.000.337,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:34:31.000.087,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:34:40.000.960,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldIntf.pas</Transaction>
+    <Transaction>2023/02/01 19:34:40.000.888,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldImpl.pas</Transaction>
+    <Transaction>2023/02/01 19:34:51.000.246,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldIntf.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\Hello_WorldIntf.pas</Transaction>
+    <Transaction>2023/02/01 19:34:52.000.848,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:34:52.000.009,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldImpl.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\Hello_WorldImpl.pas</Transaction>
+    <Transaction>2023/02/01 19:34:52.000.848,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\FormUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 19:34:53.000.648,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:34:53.000.648,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 19:34:54.000.475,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Nova pasta\Project3.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

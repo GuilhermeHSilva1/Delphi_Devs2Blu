@@ -1,0 +1,12 @@
+unit ICalculadora;
+
+interface
+
+type
+  ICalculadora = interface
+
+  end;
+
+implementation
+
+end.

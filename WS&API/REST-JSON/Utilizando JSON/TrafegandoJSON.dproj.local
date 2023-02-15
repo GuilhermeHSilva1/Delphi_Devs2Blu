@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/06 18:39:46.000.945,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST-JSON\Utilizando JSON\JSON.dproj</Transaction>
+    <Transaction>2023/02/06 18:41:09.000.095,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST-JSON\Utilizando JSON\Unit1.pas</Transaction>
+    <Transaction>2023/02/06 18:41:17.000.401,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST-JSON\Utilizando JSON\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST-JSON\Utilizando JSON\UDadosGerais.pas</Transaction>
+    <Transaction>2023/02/06 18:47:20.000.313,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\model\service\UDadosGerais.pas</Transaction>
+    <Transaction>2023/02/06 18:48:21.000.884,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\TrafegandoJSON.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\JSON.dproj</Transaction>
+    <Transaction>2023/02/06 20:25:58.000.449,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\Unit1.pas</Transaction>
+    <Transaction>2023/02/06 20:27:22.000.307,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\model\service\UVerificacao.pas</Transaction>
+    <Transaction>2023/02/06 20:30:50.000.811,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\REST-JSON\Utilizando JSON\model\service\UVerificacao.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

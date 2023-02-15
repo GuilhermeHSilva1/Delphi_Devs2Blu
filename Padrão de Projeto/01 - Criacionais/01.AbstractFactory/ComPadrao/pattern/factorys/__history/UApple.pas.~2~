@@ -1,0 +1,15 @@
+unit UApple;
+
+interface
+
+uses UInterface;
+
+type
+  TApple = class(TInterfacedObject, IFactoryMarca)
+    function ConsultarNotebook: INotebook;
+    function ConsultarDesktop:  IDesktop;
+end;
+
+implementation
+
+end.

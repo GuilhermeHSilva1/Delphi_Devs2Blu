@@ -1,0 +1,28 @@
+unit UVostro;
+
+interface
+
+uses
+  UInterface;
+
+type
+  TVostro = class(TInterfacedObject, INoteBook)
+    function BuscarTamnhoTela: String;
+    function BuscarMemoriaRam: String;
+  end;
+
+implementation
+
+{ TVostro }
+
+function TVostro.BuscarMemoriaRam: String;
+begin
+  Result := '3GB DDR3';
+end;
+
+function TVostro.BuscarTamnhoTela: String;
+begin
+  Result := 'Tela de 14 polegadas';
+end;
+
+end.

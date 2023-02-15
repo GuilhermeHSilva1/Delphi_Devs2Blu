@@ -1,0 +1,87 @@
+unit UCarRental;
+
+interface
+
+uses UVehicle, UInvoice;
+
+type
+  TCarRental = class
+    private
+      FStart : TDateTime;
+      FFinish: TDateTime;
+
+      FVehicle: TVehicle;
+      FInvoice: TInvoice;
+    function GetStart: TDateTime;
+    function GetInvoice: TInvoice;
+    function GetFinish: TDateTime;
+    function GetVehicle: TVehicle;
+
+    procedure SetVehicle(const Value: TVehicle);
+    procedure SetInvoice(const Value: TInvoice);
+    procedure SetFinish(const Value: TDateTime);
+    procedure SetStar(const Value: TDateTime);
+
+
+
+    public
+      constructor Create(const aStart, aFinish: TDateTime; aVehicle: TVehicle);
+
+      property Start: TDateTime read GetStart write SetStar;
+      property Finish: TDateTime read GetFinish write SetFinish;
+      property Vehicle: TVehicle read GetVehicle write SetVehicle;
+      property Invoice: TInvoice read GetInvoice write SetInvoice;
+
+  end;
+
+implementation
+
+{ TCarRental }
+
+constructor TCarRental.Create(const aStart, aFinish: TDateTime;
+  aVehicle: TVehicle);
+begin
+
+end;
+
+function TCarRental.GetFinish: TDateTime;
+begin
+
+end;
+
+function TCarRental.GetInvoice: TInvoice;
+begin
+
+end;
+
+function TCarRental.GetStart: TDateTime;
+begin
+
+end;
+
+function TCarRental.GetVehicle: TVehicle;
+begin
+
+end;
+
+procedure TCarRental.SetFinish(const Value: TDateTime);
+begin
+
+end;
+
+procedure TCarRental.SetInvoice(const Value: TInvoice);
+begin
+
+end;
+
+procedure TCarRental.SetStar(const Value: TDateTime);
+begin
+
+end;
+
+procedure TCarRental.SetVehicle(const Value: TVehicle);
+begin
+
+end;
+
+end.

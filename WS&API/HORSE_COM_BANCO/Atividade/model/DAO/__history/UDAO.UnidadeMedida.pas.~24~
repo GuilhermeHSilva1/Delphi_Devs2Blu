@@ -1,0 +1,78 @@
+unit UDAO.UnidadeMedida;
+
+interface
+
+uses
+  System.JSON,
+  UDAO.Intf,
+  UUtil.Banco;
+
+type
+  TDaoUnidadeMedida = class(TInterfacedObject, IDAOUNIDADE)
+    function ObterRegistros: TJSonArray;
+    function ProcurarPorID(const aIdentificador: Integer): TJSONObject;
+    function AdicionarRegistro(aRegistro: TJSONObject): Boolean;
+    function DeletarRegistro(const aIdentificador: Integer): Boolean;
+  end;
+
+implementation
+
+uses
+  System.SysUtils,
+  FireDAC.comp.Client,
+  DataSET.Serialize;
+
+{ TDaoUnidadeMedida }
+
+function TDaoUnidadeMedida.AdicionarRegistro(aRegistro: TJSONObject): Boolean;
+begin
+  try
+    Result := TUtilBanco.AdicionarRegistro('UNIDADEMEDIDA', aRegistro.ToJSON);
+  except on E: Exception do
+    raise Exception.Create('Erro ao adicionar unidade');
+  end;
+end;
+
+function TDaoUnidadeMedida.DeletarRegistro(const aIdentificador: Integer): Boolean;
+begin
+  try
+    Result := TUtilBanco.RemoverRegistro('UNIDADEMEDIDA', aIdentificador);
+  except on E: Exception do
+    raise Exception.Create('Erro ao Remover Registro: ' + E.Message);
+  end;
+end;
+
+function TDaoUnidadeMedida.ObterRegistros: TJSonArray;
+var
+  xQuery: TFDQuery;
+begin
+  xQuery := nil;
+    try
+      try
+        xQuery := TUtilBanco.ExecutarConsulta('SELECT * FROM UNIDADEMEDIDA');
+
+        Result := xQuery.ToJSONArray();
+      except on E: Exception do
+         raise Exception.Create('Erro ao obter registros: ' + e.Message);
+      end;
+    finally
+      FreeAndNil(xQuery);
+    end;
+end;
+
+function TDaoUnidadeMedida.ProcurarPorID(const aIdentificador: Integer): TJSONObject;
+var
+  xQuery: TFDQuery;
+begin
+  xQuery := nil;
+  try
+    try
+      xQuery := TUtilBanco.ExecutarConsulta(
+      Format('SELECT * FROM UNIDADEMEDIDA WHERE ID = %d',[aIdentificador]));
+    except on E: Exception do
+    end;
+  finally
+  end;
+end;
+
+end.

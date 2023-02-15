@@ -1,0 +1,85 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'TList'
+  ClientHeight = 301
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Edit1: TEdit
+    Left = 24
+    Top = 24
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object btnAdd: TButton
+    Left = 24
+    Top = 64
+    Width = 121
+    Height = 25
+    Caption = 'Add'
+    TabOrder = 1
+    OnClick = btnAddClick
+  end
+  object btnRemove: TButton
+    Left = 24
+    Top = 104
+    Width = 121
+    Height = 25
+    Caption = 'Remove'
+    TabOrder = 2
+    OnClick = btnRemoveClick
+  end
+  object btnListar: TButton
+    Left = 24
+    Top = 144
+    Width = 121
+    Height = 25
+    Caption = 'Listar'
+    TabOrder = 3
+    OnClick = btnListarClick
+  end
+  object btnCapacity: TButton
+    Left = 24
+    Top = 184
+    Width = 121
+    Height = 25
+    Caption = 'Capacity'
+    TabOrder = 4
+    OnClick = btnCapacityClick
+  end
+  object btnCount: TButton
+    Left = 24
+    Top = 224
+    Width = 121
+    Height = 25
+    Caption = 'Count'
+    TabOrder = 5
+    OnClick = btnCountClick
+  end
+  object btnOnNotify: TButton
+    Left = 24
+    Top = 264
+    Width = 121
+    Height = 25
+    Caption = 'OnNotify'
+    TabOrder = 6
+    OnClick = btnOnNotifyClick
+  end
+  object Memo1: TMemo
+    Left = 168
+    Top = 24
+    Width = 233
+    Height = 269
+    TabOrder = 7
+  end
+end

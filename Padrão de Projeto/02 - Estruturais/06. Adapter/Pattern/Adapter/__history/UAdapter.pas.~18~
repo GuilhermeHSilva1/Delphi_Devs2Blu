@@ -1,0 +1,21 @@
+unit UAdapter;
+
+interface
+
+uses
+  UInterfaceViaCEP, UAdaptee;
+
+type
+  TAdapter = class(TInterfacedObject, IWebServiceViaCEP)
+    private
+      FWebServiceCorreios: TWebServiceCorreios;
+    public
+    procedure ConsultarEnderecoWebService(const aCep: String);
+    function ObterLogradouro: String;
+    function ObterBairro: String;
+    function ObterCidade: String;
+  end;
+
+implementation
+
+end.

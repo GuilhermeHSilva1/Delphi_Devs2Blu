@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/30 18:26:34.000.449,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/30 18:31:51.000.654,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/30 18:31:51.000.654,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/30 18:31:54.000.996,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Command.dproj</Transaction>
+    <Transaction>2023/01/30 18:36:21.000.397,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 18:36:34.000.168,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\pattern\UCommand.pas</Transaction>
+    <Transaction>2023/01/30 18:36:41.000.088,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 18:36:49.000.377,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\pattern\UConcreteCommand.pas</Transaction>
+    <Transaction>2023/01/30 18:36:53.000.816,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 18:36:58.000.040,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\UInvoker.pas</Transaction>
+    <Transaction>2023/01/30 18:37:05.000.404,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\UInvoker.pas=</Transaction>
+    <Transaction>2023/01/30 18:37:08.000.518,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 18:37:17.000.041,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\pattern\UInvoker.pas</Transaction>
+    <Transaction>2023/01/30 18:37:20.000.563,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 18:37:28.000.069,C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Padrão de Projeto\03 - Comportamentais\14. Command\pattern\UReceiver.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/03 18:22:18.000.866,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Calculadora.dproj</Transaction>
+    <Transaction>2023/02/03 18:28:01.000.639,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 18:28:19.000.275,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\pattern\ICalculadora.pas</Transaction>
+    <Transaction>2023/02/03 18:28:27.000.332,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 18:28:35.000.288,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\pattern\UCalculadora.pas</Transaction>
+    <Transaction>2023/02/03 18:32:24.000.293,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\pattern\ICalcular.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\pattern\ICalculadora.pas</Transaction>
+    <Transaction>2023/02/03 18:50:54.000.114,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 18:51:06.000.507,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\REST\Atividade\01\pattern\UUtils.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="pattern"/>
+    <File Path="pattern\ICalcular.pas"/>
+    <File Path="pattern\UCalculadora.pas"/>
+    <File Path="pattern\UUtils.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

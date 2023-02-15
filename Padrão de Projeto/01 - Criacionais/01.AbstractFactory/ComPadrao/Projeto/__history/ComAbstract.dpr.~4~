@@ -1,0 +1,17 @@
+program ComAbstract;
+
+uses
+  Vcl.Forms,
+  UfrmPrincipal in 'UfrmPrincipal.pas' {frmPrincipal},
+  UInterface in '..\pattern\factorys\UInterface.pas',
+  UIMac in '..\pattern\entities\UIMac.pas',
+  UInspiron in '..\pattern\entities\UInspiron.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

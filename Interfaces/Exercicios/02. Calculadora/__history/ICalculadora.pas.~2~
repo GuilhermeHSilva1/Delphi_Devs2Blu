@@ -1,0 +1,15 @@
+unit ICalculadora;
+
+interface
+
+type
+  ICalculadora = Interface
+      function Somar(aNum1, aNum2: Double): Double;
+      function Subtrair(aNum1, aNum2: Double): Double;
+      function Multiplicar(aNum1, aNum2: Double): Double;
+      function Dividir(aNum1, aNum2: Double): Double;
+  End;
+
+implementation
+
+end.

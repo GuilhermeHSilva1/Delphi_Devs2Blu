@@ -1,0 +1,92 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.Generics.Collections;
+
+type
+  TfrmPrincipal = class(TForm)
+    Edit1: TEdit;
+    btnAdd: TButton;
+    btnRemove: TButton;
+    btnListar: TButton;
+    btnCapacity: TButton;
+    btnCount: TButton;
+    btnOnNotify: TButton;
+    Memo1: TMemo;
+    procedure btnAddClick(Sender: TObject);
+    procedure btnCapacityClick(Sender: TObject);
+    procedure btnCountClick(Sender: TObject);
+    procedure btnListarClick(Sender: TObject);
+    procedure btnOnNotifyClick(Sender: TObject);
+    procedure btnRemoveClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    FListaNum : TList<Integer>;
+    procedure Notificacao(Sender: TObject; const aItem: Integer;
+      aAction: TCollectionNotification);
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnAddClick(Sender: TObject);
+begin
+  FListaNum.Add(StrToIntDef(Edit1.Text , 0));
+end;
+
+procedure TfrmPrincipal.btnCapacityClick(Sender: TObject);
+begin
+  Memo1.Lines.Clear;
+  Memo1.Lines.Add(FListaNum.Capacity.ToString);
+  //O Delphi vai aumentando a capacidade por conta própria
+end;
+
+procedure TfrmPrincipal.btnCountClick(Sender: TObject);
+begin
+  Memo1.Lines.Clear;
+  Memo1.Lines.Add(FListaNum.Count.ToString);
+end;
+
+procedure TfrmPrincipal.btnListarClick(Sender: TObject);
+var
+  I: Integer;
+begin
+  Memo1.Lines.Clear;
+  for I := 0 to Pred(FListaNum.Count) do
+    begin
+      Memo1.Lines.Add(FListaNum[I].ToString);
+    end;
+end;
+
+procedure TfrmPrincipal.btnOnNotifyClick(Sender: TObject);
+begin
+  FListaNum.OnNotify := Notificao;
+end;
+
+procedure TfrmPrincipal.btnRemoveClick(Sender: TObject);
+begin
+  FListaNum.Delete(Pred(FListaNum.Count));
+end;
+
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+FListaNum.Free;
+end;
+
+procedure TfrmPrincipal.Notificacao(Sender: TObject; const aItem: Integer;
+  aAction: TCollectionNotification);
+begin
+
+end;
+
+end.

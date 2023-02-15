@@ -1,0 +1,63 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    btnExibir: TButton;
+    cmbMarca: TComboBox;
+    lblTamanhoTela: TLabel;
+    lblMemoriaRam: TLabel;
+    lblProcessador: TLabel;
+    lblTamanhoHD: TLabel;
+    procedure btnExibirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses UInterface, UFactoryMethod;
+
+procedure TfrmPrincipal.btnExibirClick(Sender: TObject);
+var
+  xMarca          : IFactoryMarca;
+  xVerificarMarca : IFactoryMethod;
+  xDesktop        : IDesktop;
+  xNotebook       : INotebook;
+
+begin
+
+  xVerificarMarca := TFactortMethod.Create;
+  xMarca := xVerificarMarca.ConsultarMarca(cmbMarca.
+  Text);
+
+//  if cmbMarca.Items[cmbMarca.ItemIndex] = 'Dell' then
+//    xMarca := TDell.Create
+//  else if cmbMarca.Items[cmbMarca.ItemIndex] = 'Apple' then
+//    xMarca := TApple.Create;
+
+  xDesktop  := xMarca.ConsultarDesktop;
+  xNotebook := xMarca.ConsultarNotebook;    
+
+  lblTamanhoTela.Caption := xNotebook.BuscarTamnhoTela;
+  lblMemoriaRam.Caption  := xNotebook.BuscarMemoriaRam;
+
+  lblProcessador.Caption := xDesktop.BuscarNomeProcessador;
+  lblTamanhoHD.Caption   := xDesktop.BuscarTamanhoHD;
+end;
+
+end.

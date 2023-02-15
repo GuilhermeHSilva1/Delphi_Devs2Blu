@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/01/16 20:06:59.388,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2023/01/16 20:07:15.334,C:\Users\mysql\Desktop\TDD\Exercicio2\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2023/01/16 20:07:15.334,C:\Users\mysql\Desktop\TDD\Exercicio2\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2023/01/16 20:07:23.512,C:\Users\mysql\Desktop\TDD\Exercicio2\Pedido.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2023/01/16 20:07:42.718,=C:\Users\mysql\Desktop\TDD\Exercicio2\Unit1.pas</Transaction>
-    <Transaction>2023/01/16 20:07:53.536,C:\Users\mysql\Desktop\TDD\Exercicio2\UProdutos.pas=C:\Users\mysql\Desktop\TDD\Exercicio2\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2023/01/16 20:06:59.000.388,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/16 20:07:15.000.334,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Desktop\TDD\Exercicio2\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/16 20:07:15.000.334,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Desktop\TDD\Exercicio2\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/16 20:07:23.000.512,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Desktop\TDD\Exercicio2\Pedido.dproj</Transaction>
+    <Transaction>2023/01/16 20:07:42.000.718,=C:\Users\mysql\Desktop\TDD\Exercicio2\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 20:07:53.000.536,C:\Users\mysql\Desktop\TDD\Exercicio2\Unit1.pas=C:\Users\mysql\Desktop\TDD\Exercicio2\UProdutos.pas</Transaction>
   </Transactions>
 </BorlandProject>

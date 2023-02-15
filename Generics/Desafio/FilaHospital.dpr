@@ -1,0 +1,16 @@
+program FilaHospital;
+
+uses
+  Vcl.Forms,
+  UfrmPrincipal in 'UfrmPrincipal.pas' {frmPrincipal},
+  UPessoa in 'UPessoa.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  ReportMemoryLeaksOnShutdown := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

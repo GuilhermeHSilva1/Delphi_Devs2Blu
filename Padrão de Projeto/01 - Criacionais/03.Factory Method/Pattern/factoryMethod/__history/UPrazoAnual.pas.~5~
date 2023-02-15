@@ -1,0 +1,47 @@
+unit UPrazoAnual;
+
+interface
+
+uses UTipoPrazo;
+
+type
+  TPrazoAnual = Class(TInterfacedObject, ITipoPrazo)
+    private
+      FValorTotal: Real;
+    public
+          function ConstularDescricao: String;
+    function ConsultarJuros: String;
+    function ConsultarProjecao(const aValor: Real;
+      const aQtdParcelas: Integer): String;
+    function ConsultarTotal: String;
+  End;
+
+implementation
+
+uses
+  System.SysUtils, System.Classes;
+
+{ TPrazoAnual }
+
+function TPrazoAnual.ConstularDescricao: String;
+begin
+  Result := 'Prazo Anual para Pagamento';
+end;
+
+function TPrazoAnual.ConsultarJuros: String;
+begin
+
+end;
+
+function TPrazoAnual.ConsultarProjecao(const aValor: Real;
+  const aQtdParcelas: Integer): String;
+begin
+
+end;
+
+function TPrazoAnual.ConsultarTotal: String;
+begin
+
+end;
+
+end.

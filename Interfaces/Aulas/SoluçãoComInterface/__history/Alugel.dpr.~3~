@@ -1,0 +1,19 @@
+program Alugel;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils,
+  UTaxService in 'Model\Service\UTaxService.pas',
+  UCarRental in 'Model\Entities\UCarRental.pas';
+
+begin
+  try
+    { TODO -oUser -cConsole Main : Insert code here }
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

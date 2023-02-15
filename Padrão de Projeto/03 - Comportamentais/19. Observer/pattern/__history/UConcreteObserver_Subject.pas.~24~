@@ -1,0 +1,108 @@
+unit UConcreteObserver_Subject;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls,
+  Vcl.Grids, Vcl.DBGrids, Datasnap.DBClient, Vcl.ExtCtrls, USubject, UObserver,
+  System.Generics.Collections;
+
+type
+  TfrmCadastro = class(TFrame, ISubject)
+    cmbOperacao: TComboBox;
+    cmbCategoria: TComboBox;
+    edtValor: TEdit;
+    btnGravar: TButton;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet1Operacao: TStringField;
+    ClientDataSet1Categoria: TStringField;
+    ClientDataSet1Valor: TCurrencyField;
+    Shape1: TShape;
+    procedure btnGravarClick(Sender: TObject);
+  private
+    { Private declarations }
+    FObservers: TList<IObserver>;
+    procedure Notificar;
+    procedure CarregarCategorias;
+  public
+    { Public declarations }
+    constructor Create(aOwner: TComponent); override;
+    destructor Destroy; override;
+
+    procedure AdicionarObserver(aObserver: IObserver);
+    procedure RemoverObserver(aObserver: IObserver);
+  end;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmCadastro }
+
+procedure TfrmCadastro.AdicionarObserver(aObserver: IObserver);
+begin
+  FObservers.Add(aObserver)
+end;
+
+procedure TfrmCadastro.btnGravarClick(Sender: TObject);
+begin
+  ClientDataSet1.AppendRecord([cmbOperacao.Text, cmbCategoria.Text,
+                               StrToFloatDef(edtValor.Text, 0)]);
+  Self.Notificar;
+end;
+
+procedure TfrmCadastro.CarregarCategorias;
+begin
+  cmbCategoria.Clear;
+
+  case cmbOperacao.ItemIndex of
+    0:
+    begin
+      cmbCategoria.Items.Add('Salário');
+      cmbCategoria.Items.Add('13°');
+      cmbCategoria.Items.Add('Restituição do IR');
+      cmbCategoria.Items.Add('FreeLancing');
+    end;
+    1:
+    begin
+      cmbCategoria.Items.Add('Aluguel');
+      cmbCategoria.Items.Add('Supermercado');
+      cmbCategoria.Items.Add('Farmácia');
+      cmbCategoria.Items.Add('Escola');
+      cmbCategoria.Items.Add('Combustível');
+      cmbCategoria.Items.Add('Alimentação');
+      cmbCategoria.Items.Add('Roupas');
+      cmbCategoria.Items.Add('Viagens');
+    end;
+  end;
+end;
+
+constructor TfrmCadastro.Create(aOwner: TComponent);
+begin
+  inherited;
+  FObservers := TList<IObserver>.Create;
+end;
+
+destructor TfrmCadastro.Destroy;
+begin
+  FObservers.Free;
+  inherited;
+end;
+
+procedure TfrmCadastro.Notificar;
+begin
+
+end;
+
+procedure TfrmCadastro.RemoverObserver(aObserver: IObserver);
+begin
+
+end;
+
+end.

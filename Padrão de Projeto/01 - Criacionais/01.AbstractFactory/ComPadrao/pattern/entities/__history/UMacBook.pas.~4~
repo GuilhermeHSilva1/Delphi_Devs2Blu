@@ -1,0 +1,16 @@
+unit UMacBook;
+
+interface
+
+uses
+  UInterface;
+
+type
+  TMacBook = class(TInterfacedObject, INotebook)
+    function BuscarTamnhoTela: String;
+    function BuscarMemoriaRam: String;
+  end;
+
+implementation
+
+end.

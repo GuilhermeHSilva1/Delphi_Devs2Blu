@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/01/17 20:11:43.290,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/17 20:11:57.425,C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Aulas\Aula5\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/17 20:11:57.425,C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Aulas\Aula5\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/01/17 20:12:04.180,C:\Users\mysql\Documents\Delphi_Devs2Blu\Generics\Aulas\Aula5\ConstructorConstraint.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

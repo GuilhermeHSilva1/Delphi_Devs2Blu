@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/20 20:56:02.000.848,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Projeto.dproj</Transaction>
+    <Transaction>2023/01/20 20:56:07.000.221,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:56:16.000.387,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Model\Entities\UVehicle.pas</Transaction>
+    <Transaction>2023/01/20 20:59:53.000.014,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 21:00:01.000.286,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Model\Entities\UCarRental.pas</Transaction>
+    <Transaction>2023/01/20 21:00:05.000.257,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 21:00:16.000.740,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Model\Entities\UInvoice.pas</Transaction>
+    <Transaction>2023/01/20 21:00:21.000.413,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 21:00:30.000.405,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Model\Services\UBrazilTaxService.pas</Transaction>
+    <Transaction>2023/01/20 21:00:34.000.842,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 21:00:42.000.693,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Aulas\SoluçãoSemInterface\Model\Services\URentalService.pas</Transaction>
+  </Transactions>
+</BorlandProject>

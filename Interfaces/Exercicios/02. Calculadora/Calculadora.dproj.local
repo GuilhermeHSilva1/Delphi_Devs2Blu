@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/23 19:44:06.931,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/23 19:48:12.489,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\UfrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/23 19:48:12.489,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/01/23 19:48:18.561,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Calculadora.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>2023/01/23 19:49:53.657,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:49:59.489,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\UCalculadora.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:51:44.489,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:52:11.619,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\ICalculadora.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:07:34.389,=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:07:45.698,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\UCalculadoraServico.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:28:11.400,C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\ICalculadoraService.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\Interfaces\Exercicios\02. Calculadora\ICalculadora.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="UCalculadora.pas"/>
+    <File Path="UfrmPrincipal.pas"/>
+    <File Path="UfrmPrincipal.dfm"/>
+    <File Path="ICalculadoraService.pas"/>
+    <File Path="UCalculadoraServico.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

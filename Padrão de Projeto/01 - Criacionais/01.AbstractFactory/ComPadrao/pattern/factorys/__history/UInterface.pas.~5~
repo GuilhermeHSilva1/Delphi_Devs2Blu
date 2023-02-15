@@ -1,0 +1,30 @@
+unit UInterface;
+
+interface
+
+type
+  INotebook = interface
+    ['{4C987F7B-EFFA-41EB-BD70-978B47298AAC}']
+    function BuscarTamnhoTela: String;
+    function BuscarMemoriaRam: String;
+  end;
+
+  IDesktop = Interface
+    ['{B4B38769-834C-464C-B737-84D600D518F7}']
+    function BuscarNomeProcessador: String;
+    function BuscarTamanhoHD: String;
+  End;
+
+  IFactoryMarca = interface
+    ['{08EE0792-BF12-478E-B421-3EA0C7035036}']
+    function ConsultarNotebook: INotebook;
+    function ConsultarDesktop:  IDesktop;
+  end;
+
+  IFactoryMethod = interface
+    ['{E8CADF06-E4DF-4D2C-82AF-E406459126CB}']
+  end;
+
+implementation
+
+end.

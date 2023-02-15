@@ -1,0 +1,68 @@
+unit UDadosGerais;
+
+interface
+
+uses
+  System.JSON;
+
+type
+  TDadosGerais = class
+    private
+      FNomeArquivo: string;
+      FJSON: TJSONArray;
+
+      procedure SalvarDados;
+      procedure CarregarDados;
+    public
+      constructor Create(const aNomeArquivo: String);
+
+      function AdicionarRegistro(aJSON: TJSONObject): Boolean;
+      function RemoverRegistro(const aIdentificador: Integer): Boolean;
+
+      property JSON: TJSONArray read FJSON;
+  end;
+
+implementation
+
+uses
+  System.Classes, System.SysUtils;
+
+{ TDadosGerais }
+
+function TDadosGerais.AdicionarRegistro(aJSON: TJSONObject): Boolean;
+begin
+    try
+    if not Assigned(FJSON) then
+      FJSON := TJSONArray.Create;
+
+    FJSON.AddElement(aJSON);
+
+    self.SalvarDados;
+    Result := True;
+  except
+    on E: Exception do
+      raise Exception.Create('Não foi possível Adicionar o registro: ' + E.Message);
+  end;
+end;
+
+procedure TDadosGerais.CarregarDados;
+begin
+
+end;
+
+constructor TDadosGerais.Create(const aNomeArquivo: String);
+begin
+
+end;
+
+function TDadosGerais.RemoverRegistro(const aIdentificador: Integer): Boolean;
+begin
+
+end;
+
+procedure TDadosGerais.SalvarDados;
+begin
+
+end;
+
+end.

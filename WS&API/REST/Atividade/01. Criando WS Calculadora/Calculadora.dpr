@@ -1,0 +1,28 @@
+program Calculadora;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Horse,
+  System.SysUtils,
+  ICalcular in 'pattern\ICalcular.pas',
+  UCalculadora in 'pattern\UCalculadora.pas',
+  UUtils in 'pattern\UUtils.pas';
+
+const Operacao = 'somar';
+begin
+
+  THorse.Get('/somar/:valor1/:valor2', TUtils.Somar);
+
+  THorse.Get('/subtrair/:valor1/:valor2', TUtils.Subtrair);
+
+  THorse.Get('/multiplicar/:valor1/:valor2', TUtils.Multiplicar);
+
+  THorse.Get('/dividir/:valor1/:valor2', TUtils.Dividir);
+
+  THorse.Listen(1234,
+    procedure(Horse: THorse)
+    begin
+      Writeln('Server is runing on port ' + IntToStr(Horse.Port));
+    end);
+end.

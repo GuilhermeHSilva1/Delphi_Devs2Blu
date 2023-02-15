@@ -1,0 +1,43 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TMeuGenericoA = array[0..9] of string;
+
+  TMeuArrayGenerico<T> = class
+    FArray: Array [0..9] of T;
+  end;
+
+  TfrmPrincipal = class(TForm)
+    btnBOTAO1: TButton;
+    btnBOTAO2: TButton;
+    procedure btnBOTAO2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnBOTAO2Click(Sender: TObject);
+var
+  xAux1: TMeuArrayGenerico<String>;
+  xAux2: TMeuArrayGenerico<String>;
+  xAux3: TMeuGenericoA;
+  xAux4: TMeuGenericoA;
+begin
+  xAux1 := xAux3; //
+end;
+
+end.

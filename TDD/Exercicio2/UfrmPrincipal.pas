@@ -75,9 +75,11 @@ end;
 procedure TfrmPrincipal.btnComprarClick(Sender: TObject);
 var
   xValorPago: Double;
+  xQuantidade : Integer;
 begin
- xValorPago := FProduto.ComprarProduto(StrToInt(edtQuantidade.Text));
- showMessage('Você pagou: R$:' + (xValorPago).ToString);
+  xQuantidade := StrToInt(edtQuantidade.Text);
+ xValorPago := FProduto.ComprarProduto(xQuantidade);
+ showMessage('Você pagou: R$:' + (xValorPago * FProduto.VerificarDesconto(xQuantidade)).ToString);
 end;
 
 procedure TfrmPrincipal.btnVerDescontoClick(Sender: TObject);

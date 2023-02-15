@@ -1,0 +1,15 @@
+unit UFactoryMethod;
+
+interface
+
+uses UInterface;
+
+type
+  TFactortMethod  = class(TInterfacedObject, IFactoryMethod)
+  public
+    function ConsultarMarca : IFactoryMarca;
+  end;
+
+implementation
+
+end.

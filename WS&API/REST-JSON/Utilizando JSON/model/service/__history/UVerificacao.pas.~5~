@@ -1,0 +1,44 @@
+unit UVerificacao;
+
+interface
+
+uses
+  Horse;
+
+type
+  TVerificar = class
+    private
+      procedure Post;
+      procedure Get(Res: THorseResponse);
+      procedure Delete;
+  end;
+
+implementation
+
+uses
+  UDadosGerais;
+
+{ TVerificar }
+
+procedure TVerificar.Delete;
+begin
+
+end;
+
+procedure TVerificar.Get(Req: THorseRequest;
+var
+  xDadosPessoas: TDadosGerais;
+begin
+  xDadosPessoas := TDadosGerais.Create('Cargo.json');
+  try
+    Res.Send<TJSONArray>(xDadosPessoas.JSON);
+  finally
+    xDadosPessoas.Free;
+  end;
+
+procedure TVerificar.Post;
+begin
+
+end;
+
+end.

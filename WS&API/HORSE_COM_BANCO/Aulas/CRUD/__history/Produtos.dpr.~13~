@@ -1,0 +1,33 @@
+program Produtos;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Horse,
+  Horse.Jhonson,
+  Horse.Query,
+  System.SysUtils,
+  UUtil.Banco in 'model\utils\UUtil.Banco.pas',
+  UDAO.Produtos in 'model\DAO\UDAO.Produtos.pas',
+  UController.Produtos in 'model\Controllers\UController.Produtos.pas',
+  UDAO.Intf in 'model\DAO\UDAO.Intf.pas';
+
+procedure Registry;
+begin
+  THorse.Group.Prefix('v1');
+end;
+
+begin
+
+  THorse.Get('/ping',
+    procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
+    begin
+      Res.Send('pong');
+    end);
+
+  THorse.Listen(9000,
+    procedure(Horse: THorse)
+    begin
+      Writeln('Server is runing on port ' + IntToStr(Horse.Port));
+    end);
+end.

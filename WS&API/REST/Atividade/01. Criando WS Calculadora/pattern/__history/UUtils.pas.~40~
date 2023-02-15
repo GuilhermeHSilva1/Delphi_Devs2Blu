@@ -1,0 +1,83 @@
+unit UUtils;
+
+interface
+
+uses
+  Horse;
+
+type
+  TUtils = class
+    private
+      //constructor Create(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+      class procedure TestarParametros(Req: THorseRequest; Res: THorseResponse; var aValor1, aValor2: Double);
+    public
+      class procedure Somar(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+
+      //property Valor1: Double read GetValor1 write SetValor1;
+  end;
+
+implementation
+
+{ TUtils }
+
+uses ICalcular, UCalculadora, System.SysUtils;
+
+{constructor TUtils.Create(Req: THorseRequest; Res: THorseResponse; Next: TProc);
+begin
+  if Req.Params.Count <> 2 then
+  begin
+    Res.Send('Parâmetros Incorretos!');
+    Exit;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor1'], FValor1) then
+  begin
+    Res.Send('Valor 1 Incorreto!');
+    Exit;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor2'], FValor2) then
+  begin
+    Res.Send('Valor 2 Incorreto!');
+    Exit;
+  end;
+end;}
+
+class procedure TUtils.TestarParametros(Req: THorseRequest; Res: THorseResponse; var aValor1, aValor2: Double);
+begin
+  if Req.Params.Count <> 2 then
+  begin
+    Res.Send('Parâmetros Incorretos!');
+    Abort;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor1'], aValor1) then
+  begin
+    Res.Send('Valor 1 Incorreto!');
+    Abort;
+  end;
+
+  if not TryStrToFloat(Req.Params.Items['valor2'], aValor2) then
+  begin
+    Res.Send('Valor 2 Incorreto!');
+    Abort;
+  end;
+end;
+
+class procedure TUtils.Somar(Req: THorseRequest; Res: THorseResponse;
+  Next: TProc);
+var
+  xCalculadora: ICalculadora;
+  xResultado: Double;
+  xValor1, xValor2: Double;
+begin
+
+  Self.TestarParametros(Req, Res, xValor1, xValor2);
+
+  xCalculadora := TCalculadora.Create;
+  xResultado   := xCalculadora.Somar(xValor1, xValor2);
+
+  Res.Send('Soma: ' + xResultado.ToString);
+end;
+
+end.

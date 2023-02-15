@@ -1,0 +1,49 @@
+unit UCalculadora;
+
+interface
+
+uses ICalcular;
+
+type
+  TCalculadora = class(TInterfacedObject, ICalculadora)
+    function Somar(const pNum1, pNum2: Double): Double;
+    function Subtrair(const pNum1, pNum2: Double): Double;
+    function Dividir(const pNum1, pNum2: Double): Double;
+    function Multiplicar(const pNum1, pNum2: Double): Double;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TCalculadora }
+
+
+
+{ TCalculadora }
+
+function TCalculadora.Dividir(const pNum1, pNum2: Double): Double;
+begin
+  if pNum2 = 0 then
+    raise Exception.Create('Não é possivel dividir por 0');
+
+  Result := pNum1 / pNum2;
+end;
+
+function TCalculadora.Multiplicar(const pNum1, pNum2: Double): Double;
+begin
+  Result := pNum1 * pNum2;
+end;
+
+function TCalculadora.Somar(const pNum1, pNum2: Double): Double;
+begin
+  Result := pNum1 + pNum2;
+end;
+
+function TCalculadora.Subtrair(const pNum1, pNum2: Double): Double;
+begin
+  Result := pNum1 - pNum2;
+end;
+
+end.

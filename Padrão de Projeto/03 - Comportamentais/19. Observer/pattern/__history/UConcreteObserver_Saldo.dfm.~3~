@@ -1,0 +1,92 @@
+object fraSaldo: TfraSaldo
+  Left = 0
+  Top = 0
+  Width = 387
+  Height = 126
+  TabOrder = 0
+  object Label1: TLabel
+    Left = 160
+    Top = 3
+    Width = 89
+    Height = 13
+    Caption = 'Balan'#231'o Financeiro'
+  end
+  object label2: TLabel
+    Left = 48
+    Top = 32
+    Width = 59
+    Height = 16
+    Caption = 'Cr'#233'ditos:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object label4: TLabel
+    Left = 48
+    Top = 62
+    Width = 54
+    Height = 16
+    Caption = 'D'#233'bitos:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 48
+    Top = 96
+    Width = 40
+    Height = 16
+    Caption = 'Saldo:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblCreditos: TLabel
+    Left = 312
+    Top = 32
+    Width = 28
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblDebitos: TLabel
+    Left = 312
+    Top = 62
+    Width = 28
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblSaldo: TLabel
+    Left = 312
+    Top = 96
+    Width = 28
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+end

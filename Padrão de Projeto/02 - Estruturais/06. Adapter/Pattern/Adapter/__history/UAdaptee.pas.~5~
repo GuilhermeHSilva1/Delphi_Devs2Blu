@@ -1,0 +1,48 @@
+unit UAdaptee;
+
+interface
+
+type
+  TWebServiceCorreios = class
+  public
+    procedure ConsultarCEP;
+    procedure DefinirParametrosConsulta(const aCep: STring);
+
+    destructor Destroy; override;
+  end;
+
+implementation
+
+{
+procedure TWebServiceCorreios.ConsultarCEP;
+var
+  xCorreios: AtendeCliente;
+  xHTTPRIO: THTTPRIO;
+begin
+  xHTTPRIO := THTTPRIO.Create(nil);
+  xHTTPRIO.OnBeforeExecute := Self.BeforeExecute;
+
+  xCorreios := GetAtendeCliente(True, '', xHTTPRIO);
+  FResposta := xCorreios.consultarCEP(FParametros).return;
+end;
+
+procedure TWebServiceCorreios.DefinirParametrosConsulta(const aCep: String);
+begin
+  FParametros := consultaCEP.Create;
+  FParametros.cep := aCep;
+end;
+
+destructor TWebServiceCorreios.Destroy;
+begin
+  FreeAndNil(FParametros);
+  FreeAndNil(FResposta);
+  inherited;
+end;
+
+function TWebServiceCorreios.ObterResposta(const aInformacao: string): String;
+begin
+
+end;
+}
+
+end.

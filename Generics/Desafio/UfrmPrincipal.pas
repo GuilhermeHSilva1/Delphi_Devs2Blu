@@ -1,0 +1,106 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.Imaging.pngimage, UPessoa;
+
+type
+  TfrmPrincipal = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    edtCPF: TEdit;
+    edtNome: TEdit;
+    edtEspecialidade: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Shape1: TShape;
+    Shape2: TShape;
+    btnGravar: TButton;
+    btnChamar: TButton;
+    lblNomeAnterior: TLabel;
+    lblEspecialidadeAnterior: TLabel;
+    Label6: TLabel;
+    lblChamarNome: TLabel;
+    lblChamarEspecialidade: TLabel;
+    Label9: TLabel;
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnChamarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    FPessoa : TPessoa;
+    FFila : TFila;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnChamarClick(Sender: TObject);
+begin
+
+    lblNomeAnterior.Caption := lblChamarNome.Caption;
+    lblEspecialidadeAnterior.Caption := lblChamarEspecialidade.Caption;
+
+    FPessoa := FFila.Proximo;
+
+    if FPessoa <> nil then
+    begin
+      lblChamarNome.Caption := 'Nome: ' + FPessoa.FNome;
+      lblChamarEspecialidade.Caption := 'Especialidade: ' + FPessoa.FEspecialidade;
+      FreeAndNil(FPessoa);
+    end
+      else
+    begin
+      ShowMessage('Não há mais pacientes a ser chamado');
+      lblChamarNome.Caption := 'Nome: ';
+      lblChamarEspecialidade.Caption := 'Especialidade: ';
+    end;
+
+end;
+
+procedure TfrmPrincipal.btnGravarClick(Sender: TObject);
+begin
+
+  if not Assigned(FFila) then
+      FFila := TFila.Create;
+
+    FPessoa := TPessoa.Create;
+
+    FPessoa.FCPF  := edtCPF.Text;
+    FPessoa.FNome := edtNome.Text;
+    FPessoa.FEspecialidade := edtEspecialidade.Text;
+
+    FFila.Adicionar(FPessoa);
+
+
+end;
+
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+var
+  I: Integer;
+begin;
+  try
+    for I := 0 to FFila.InstanceSize do
+      begin
+        FPessoa:= FFila.Proximo;
+        FreeAndNil(FPessoa);
+      end;
+    FreeAndNil(FFila);
+  except
+    close;
+  end;
+end;
+
+end.

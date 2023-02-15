@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/08 19:25:19.000.039,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Atividade.dproj</Transaction>
+    <Transaction>2023/02/08 19:26:11.000.677,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 19:26:27.000.854,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\model\entities\UProduto.pas</Transaction>
+    <Transaction>2023/02/08 19:28:09.000.632,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 19:28:22.000.124,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\model\controller\UProduto.Controller.pas</Transaction>
+    <Transaction>2023/02/08 19:40:12.000.672,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas</Transaction>
+    <Transaction>2023/02/08 19:40:27.000.095,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\JWT_API\Atividade\model\service\UDadosGerais.pas</Transaction>
+  </Transactions>
+</BorlandProject>

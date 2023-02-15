@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/03 19:23:05.000.002,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/02/03 19:23:35.000.512,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/02/03 19:23:35.000.512,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/02/03 19:23:44.000.362,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\ConsumindoSOAP.dproj</Transaction>
+    <Transaction>2023/02/03 19:27:05.000.175,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 19:27:13.000.634,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\Unit1.pas=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\IHello_World1.pas</Transaction>
+    <Transaction>2023/02/03 19:28:08.000.095,C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\IHello_World1.pas=</Transaction>
+    <Transaction>2023/02/03 19:28:51.000.749,=C:\Users\mysql\Documents\Delphi_Devs2Blu\WS&amp;API\Aula\SOAP\Consumindo WS Soap\IHello_World1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

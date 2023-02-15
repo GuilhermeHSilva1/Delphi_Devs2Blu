@@ -1,0 +1,46 @@
+unit UCalculadoraServico;
+
+interface
+
+uses ICalculadoraService;
+
+type
+
+  TEnumOperacao = (Somar, Subtrair, Dividir, Multiplicar);
+
+  TServicoCalculadora = class
+    private
+      FCalculadora: ICalculadora;
+    public
+      function ProcessCalc(pTipoCalculo: TEnumOperacao): Double;
+
+  end;
+
+implementation
+
+{ TServicoCalculadora }
+
+
+
+{ TServicoCalculadora }
+
+function TServicoCalculadora.ProcessCalc(pTipoCalculo: TEnumOperacao): Double;
+var
+  xNum1, xNum2: Double;
+begin
+
+  case pTipoCalculo of
+
+    Somar: ;
+
+    Subtrair: ;
+
+    Dividir: ;
+
+    Multiplicar: ;
+
+  end;
+
+end;
+
+end.

@@ -1,0 +1,38 @@
+unit UTarget;
+
+interface
+
+uses UWebServiceViaCEP;
+
+type
+  TComunicador = class
+    private
+      FWebServiceCEP : IWebServiceViaCEP;
+    public
+      constructor Create(aWebServiceViaCEP : IWebServiceViaCEP);
+      destructor Destroy; override;
+
+      function ConsultarEndereco(const aCep: String): TStringList;
+  end;
+
+implementation
+
+{ TComunicador }
+
+function TComunicador.ConsultarEndereco(const aCep: String): TStringList;
+begin
+
+end;
+
+constructor TComunicador.Create(aWebServiceViaCEP: IWebServiceViaCEP);
+begin
+
+end;
+
+destructor TComunicador.Destroy;
+begin
+
+  inherited;
+end;
+
+end.
