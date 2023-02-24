@@ -1,0 +1,58 @@
+unit Uservice.Base;
+
+interface
+
+uses
+  Uservice.Intf, REST.Client, REST.Types;
+
+type
+  TServiceBase = class(TInterfacedObject, IService)
+    private
+      FToken: String;
+    protected
+      FRESTClient: TRESTClient;
+      FRESTRequest: TRESTRequest;
+      FRESTRespone: TRESTResponse;
+
+      procedure CarregarToken;
+
+      procedure Registrar; virtual; abstract;
+      procedure Listar; Virtual; Abstract;
+      procedure Excluir; Virtual; Abstract;
+
+      function ObterRegistro(const aID: Integer): TObject; Virtual; Abstract;
+
+    public
+      constructor Create;
+      destructor Destroy; override;
+  end;
+
+implementation
+
+uses
+  System.SysUtils, System.Classes, Winapi.Windows;
+
+{ TServiceBase }
+
+procedure TServiceBase.CarregarToken;
+var
+  xMeruArquivo: THandle;
+  xStringList: TStringList;
+const
+  NOME_ARQUIVO = 'Token.jwt';
+begin
+
+end;
+
+constructor TServiceBase.Create;
+begin
+
+end;
+
+destructor TServiceBase.Destroy;
+begin
+
+  inherited;
+end;
+
+end.
