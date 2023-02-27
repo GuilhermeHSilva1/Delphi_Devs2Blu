@@ -1,0 +1,72 @@
+unit Uservice.Bet;
+
+interface
+
+uses
+  UService.Base, UEntity.Bets;
+
+type
+  TServiceBet = class(TServiceBase)
+    private
+      FBet : TBet;
+    public
+      constructor Create; overload;
+      constructor Create(aBet: TBet); overload;
+      destructor Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure Excluir; override;
+
+      function ObterRegistro(const aId: Integer): TObject; override;
+  end;
+
+implementation
+
+uses
+  REST.Types,
+  System.JSON, System.SysUtils, System.Classes, FireDac.comp.Client, DataSet.Serialize,
+  UUtils.Constants;
+
+{ TServiceBet }
+
+constructor TServiceBet.Create;
+begin
+  Inherited Create;
+end;
+
+constructor TServiceBet.Create(aBet: TBet);
+begin
+  FBet := aBet;
+end;
+
+destructor TServiceBet.Destroy;
+begin
+  FreeAndNil(FBet);
+  inherited;
+end;
+
+procedure TServiceBet.Excluir;
+begin
+  inherited;
+
+end;
+
+procedure TServiceBet.Listar;
+begin
+  inherited;
+
+end;
+
+function TServiceBet.ObterRegistro(const aId: Integer): TObject;
+begin
+
+end;
+
+procedure TServiceBet.Registrar;
+begin
+  inherited;
+
+end;
+
+end.

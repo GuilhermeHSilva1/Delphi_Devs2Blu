@@ -17,7 +17,11 @@ uses
   Uservice.User in 'model\services\Uservice.User.pas',
   UUtils.Constants in 'model\utils\UUtils.Constants.pas',
   UService.Login in 'model\services\UService.Login.pas',
-  UService.User.Authenticated in 'model\services\UService.User.Authenticated.pas';
+  UService.User.Authenticated in 'model\services\UService.User.Authenticated.pas',
+  UUtils.Enums in 'model\utils\UUtils.Enums.pas',
+  Uservice.Bet in 'model\services\Uservice.Bet.pas',
+  UService.Match in 'model\services\UService.Match.pas',
+  UService.Team in 'model\services\UService.Team.pas';
 
 {$R *.res}
 

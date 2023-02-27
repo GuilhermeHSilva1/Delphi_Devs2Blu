@@ -1,0 +1,18 @@
+unit Uservice.Bet;
+
+interface
+
+uses
+  UService.Base, UEntity.Bets;
+
+type
+  TServiceBet = class(TServiceBase)
+    private
+      FBet : TBet;
+    public
+
+  end;
+
+implementation
+
+end.

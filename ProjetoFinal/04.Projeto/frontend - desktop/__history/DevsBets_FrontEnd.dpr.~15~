@@ -12,7 +12,12 @@ uses
   UEntity.Teams in '..\backend\model\entities\UEntity.Teams.pas',
   UEntity.Users in '..\backend\model\entities\UEntity.Users.pas',
   Ufrmhome in 'model\views\Ufrmhome.pas' {frmhome},
-  UService.Intf in 'model\services\UService.Intf.pas';
+  UService.Intf in 'model\services\UService.Intf.pas',
+  Uservice.Base in 'model\services\Uservice.Base.pas',
+  Uservice.User in 'model\services\Uservice.User.pas',
+  UUtils.Constants in 'model\utils\UUtils.Constants.pas',
+  UService.Login in 'model\services\UService.Login.pas',
+  UService.User.Authenticated in 'model\services\UService.User.Authenticated.pas';
 
 {$R *.res}
 

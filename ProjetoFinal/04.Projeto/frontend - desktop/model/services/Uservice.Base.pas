@@ -1,9 +1,8 @@
-unit Uservice.Base;
+unit UService.Base;
 
 interface
 
-uses
-  Uservice.Intf, REST.Client, REST.Types;
+uses UService.Intf, REST.Client, REST.Types;
 
 type
   TServiceBase = class(TInterfacedObject, IService)
@@ -16,23 +15,21 @@ type
 
       procedure CarregarToken;
 
-      procedure Registrar; virtual; abstract;
-      procedure Listar; Virtual; Abstract;
-      procedure Excluir; Virtual; Abstract;
+      procedure Registrar; virtual; abstract;  //virtual
+      procedure Listar; virtual; abstract;
+      procedure Excluir; virtual; abstract;
 
-      function ObterRegistro(const aID: Integer): TObject; Virtual; Abstract;
-
+      function ObterRegistro(const aId: Integer): TObject; virtual; abstract;
     public
       constructor Create;
       destructor Destroy; override;
   end;
-
 implementation
 
-uses
-  System.SysUtils, System.Classes, Winapi.Windows;
-
 { TServiceBase }
+
+uses
+  System.Classes, System.SysUtils, winapi.Windows;
 
 procedure TServiceBase.CarregarToken;
 var
@@ -82,6 +79,7 @@ begin
   FreeAndNil(FRESTClient);
   FreeAndNil(FRESTRequest);
   FreeAndNil(FRESTResponse);
+
   inherited;
 end;
 

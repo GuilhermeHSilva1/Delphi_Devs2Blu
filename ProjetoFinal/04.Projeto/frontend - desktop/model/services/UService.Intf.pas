@@ -9,9 +9,8 @@ type
     procedure Listar;
     procedure Excluir;
 
-    function ObterRegistro(const aID: Integer): TObject;
+    function ObterRegistro(const aId: Integer): TObject;
   end;
-
 implementation
 
 end.

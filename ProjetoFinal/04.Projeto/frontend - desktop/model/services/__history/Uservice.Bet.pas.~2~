@@ -1,0 +1,10 @@
+unit Uservice.Bet;
+
+interface
+
+uses
+  UService.Base, UEntity.Bets;
+
+implementation
+
+end.

@@ -7,13 +7,13 @@ uses
 
 type
   //Classe utilizando o padrão Singleton
-  //s
+  //Para armazenar o usuário logado
   TUserAuthenticated = class
     private
       FUser: TUser;
 
-      function GetUser: TUSer;
-      procedure SetUser(const Value: TUSer);
+      function GetUser: TUser;
+      procedure SetUser(const Value: TUser);
     public
       constructor Create;
       destructor Destroy; override;
@@ -31,13 +31,12 @@ implementation
 
 uses
   System.SysUtils;
-
 { TUserAuthenticated }
 
 constructor TUserAuthenticated.Create;
 begin
-  //Aqui não precisamos criar o FUser
-  //Quem passará o mesmo criado será a tela de login
+  //aqui não precisamos criar o FUser;
+  //Quem passará o mesmo criado será a tela de Login;
 end;
 
 destructor TUserAuthenticated.Destroy;
@@ -51,22 +50,22 @@ begin
   Result := TUserAuthenticated.Create;
 end;
 
-function TUserAuthenticated.GetUser: TUSer;
+function TUserAuthenticated.GetUser: TUser;
 begin
   Result := FUser;
 end;
 
 class function TUserAuthenticated.NewInstance: TObject;
 begin
-  if not Assigned(gbInstance) then
-    GbInstance := TUserAuthenticated(Inherited NewInstance);
+  if not Assigned(GbInstance) then
+    GbInstance := TUserAuthenticated(inherited NewInstance);
 
   Result := GbInstance;
 end;
 
-procedure TUserAuthenticated.SetUser(const Value: TUSer);
+procedure TUserAuthenticated.SetUser(const Value: TUser);
 begin
-  FUser := Value;
+  Fuser := Value;
 end;
 
 initialization

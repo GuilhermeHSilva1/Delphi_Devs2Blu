@@ -1,0 +1,67 @@
+unit Uservice.Bet;
+
+interface
+
+uses
+  UService.Base, UEntity.Bets;
+
+type
+  TServiceBet = class(TServiceBase)
+    private
+      FBet : TBet;
+    public
+      constructor Create; overload;
+      constructor Create(aBet: TBet); overload;
+      destructor Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure Excluir; override;
+
+      function ObterRegistro(const aId: Integer): TObject; override;
+  end;
+
+implementation
+
+{ TServiceBet }
+
+constructor TServiceBet.Create;
+begin
+
+end;
+
+constructor TServiceBet.Create(aBet: TBet);
+begin
+
+end;
+
+destructor TServiceBet.Destroy;
+begin
+
+  inherited;
+end;
+
+procedure TServiceBet.Excluir;
+begin
+  inherited;
+
+end;
+
+procedure TServiceBet.Listar;
+begin
+  inherited;
+
+end;
+
+function TServiceBet.ObterRegistro(const aId: Integer): TObject;
+begin
+
+end;
+
+procedure TServiceBet.Registrar;
+begin
+  inherited;
+
+end;
+
+end.

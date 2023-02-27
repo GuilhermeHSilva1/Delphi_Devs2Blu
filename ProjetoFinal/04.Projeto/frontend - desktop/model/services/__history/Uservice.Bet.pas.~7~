@@ -1,0 +1,26 @@
+unit Uservice.Bet;
+
+interface
+
+uses
+  UService.Base, UEntity.Bets;
+
+type
+  TServiceBet = class(TServiceBase)
+    private
+      FBet : TBet;
+    public
+      constructor Create; overload;
+      constructor Create(aBet: TBet); overload;
+      destructor Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure Excluir; override;
+
+      function ObterRegistro(const aId: Integer): TObject; override;
+  end;
+
+implementation
+
+end.
