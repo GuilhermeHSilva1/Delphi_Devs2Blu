@@ -1,0 +1,128 @@
+unit UFraMatch.Registry;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Objects, FMX.Controls.Presentation, FMX.ListBox, FMX.Edit,
+
+  UService.Intf;
+
+type
+  TFraMatchRegistry = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    ImgLogo: TImage;
+    lytBotoes: TLayout;
+    lblX: TLabel;
+    rectData: TRectangle;
+    rectHora: TRectangle;
+    rectSalvar: TRectangle;
+    rectTimeA: TRectangle;
+    rectTimeB: TRectangle;
+    edtData: TEdit;
+    edtHora: TEdit;
+    Label2: TLabel;
+    cmbTimeA: TComboBox;
+    cmbTimeB: TComboBox;
+    rectVoltar: TRectangle;
+    Label3: TLabel;
+  private
+    { Private declarations }
+    FServiceTeam: IService;
+
+    procedure VoltarTela;
+    procedure CarregarTeams;
+    procedure Registrar;
+  public
+    { Public declarations }
+    constructor Create(aOwner: TComponent); override;
+  end;
+
+var
+  FraMatchRegistry: TFraMatchRegistry;
+
+implementation
+
+uses
+  UFraMatch,
+  UService.Team,
+  UService.Match,
+  UEntity.Teams,
+  UEntity.Matchs;
+
+{$R *.fmx}
+
+{ TFraMatchRegistry }
+
+procedure TFraMatchRegistry.CarregarTeams;
+var
+  xTeam: TTeam;
+begin
+  cmbTimeA.Items.Clear;
+  cmbTimeB.Items.Clear;
+
+  if not Assigned(FServiceTeam) then
+    FServiceTeam := TServiceTeam.Create;
+
+  FServiceTeam.Listar;
+
+  for xTeam in TServiceTeam(FServiceTeam).Teams do
+  begin
+    cmbTimeA.Items.AddObject(xTeam.Name, xTeam);
+    cmbTimeB.Items.AddObject(xTeam.Name, xTeam);
+  end;
+end;
+
+constructor TFraMatchRegistry.Create(aOwner: TComponent);
+begin
+  inherited Create(aOwner);
+  Self.CarregarTeams;
+end;
+
+procedure TFraMatchRegistry.Registrar;
+var
+  xServiceMatch: IService;
+  xHora: TTime;
+  xData: TDate;
+  xTimeAux: TTeam;
+  xTimeA, xTimeB: TTeam;
+begin
+  if Trim(EdtHora.Text) = EmptyStr then
+    raise Exception.Create('Informe a Hora da Partida');
+
+  if Trim(edtData.Text) = EmptyStr then
+    raise Exception.Create('Informe a Data da Partida');
+
+  if cmbTimeA.ItemIndex = -1 then
+    raise Exception.Create('Informe o TimeA da Partida');
+
+  if cmbTimeB.ItemIndex = -1 then
+    raise Exception.Create('Informe o TimeB da Partida');
+
+  if cmbTimeA.ItemIndex = cmbTimeB.ItemIndex then
+    raise Exception.Create('Informe Times diferentes para a Partida');
+
+  xHora := StrToTime(Trim(edtHora.Text));
+  xData := StrToDate(Trim(edtData.Text));
+
+  xTimeAux := TTeam(cmbTimeA.Items.Objects[cmbTimeA.ItemIndex]);
+  xTimeA := xTimeAux.Clone;
+
+  xTimeAux := TTeam(cmbTimeB.Items.Objects[cmbTimeB.ItemIndex]);
+  xTimeB := xTimeAux.Clone;
+
+  xServiceMatch := TServiceMatch.Create(TMatch.Create(xData, xHora, xTimeA, xTimeB));
+
+  xServiceMatch.Registrar;
+  Self.VoltarTela;
+end;
+
+procedure TFraMatchRegistry.VoltarTela;
+begin
+  if not Assigned(FraMatch) then
+    FraMatch := TFraMatch.Create(Application);
+end;
+
+end.

@@ -1,0 +1,105 @@
+unit UFraMatch;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Objects, FMX.ListView.Types, FMX.ListView.Appearances,
+  FMX.ListView.Adapters.Base, FMX.ListView, FMX.Ani, FMX.Controls.Presentation,
+
+  UEntity.Matchs;
+
+type
+  TFraMatch = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytPartidas: TLayout;
+    lstPartidas: TListView;
+    rectToolBar: TRectangle;
+    rectExcluir: TRectangle;
+    rectNovo: TRectangle;
+    Label1: TLabel;
+    Label2: TLabel;
+  private
+    { Private declarations }
+    procedure CarregarRegistros;
+    procedure AbrirMatchRegistry;
+    procedure PrepararListView(aMatch: TMatch);
+    procedure ExcluirRegistro;
+  public
+    { Public declarations }
+    constructor Create(aOwner: TComponent); override;
+  end;
+
+var
+  fraMatch: TFraMatch;
+
+implementation
+
+uses
+  UFraMatch.Registry,
+  UService.Intf,
+  UService.Match;
+
+{$R *.fmx}
+
+{ TFraMatch }
+
+procedure TFraMatch.AbrirMatchRegistry;
+begin
+  if not Assigned(FraMatchRegistry) then
+    FraMatchRegistry := TFraMatchRegistry.Create(Application);
+
+  FraMatchRegistry.Align := TAlignLayout.Center;
+
+  Self.Parent.AddObject(FraMatchRegistry);
+  FreeAndNil(FraMatch);
+end;
+
+procedure TFraMatch.CarregarRegistros;
+var
+  xServiceMatch: IService;
+  xMatch: TMatch;
+begin
+  lstPartidas.Items.Clear;
+
+  xServiceMatch := TServiceMatch.Create;
+  xServiceMatch.Listar;
+  for xMatch in TServiceMatch(xServiceMatch).Matchs do
+    Self.PrepararListView(xMatch);
+end;
+
+constructor TFraMatch.Create(aOwner: TComponent);
+begin
+  inherited Create(aOwner);
+  Self.CarregarRegistros;
+end;
+
+procedure TFraMatch.ExcluirRegistro;
+var
+  xServiceMatch: IService;
+  xMatch: TMatch;
+  xItem: TListViewItem;
+begin
+  if lstPartidas.ItemIndex = -1 then
+
+end;
+
+procedure TFraMatch.PrepararListView(aMatch: TMatch);
+var
+  xItem : TListViewItem;
+begin
+  xItem := lstPartidas.Items.Add;
+  xItem.Tag := aMatch.Id;
+
+  TListItemText(xItem.Objects.FindDrawable('txtHora')).Text := TimeToStr(aMatch.Hour);
+  TListItemText(xItem.Objects.FindDrawable('txtData')).Text := DateToStr(aMatch.Date);
+  TListItemText(xItem.Objects.FindDrawable('txtTimeA')).Text := aMatch.TeamA.Name;
+  TListItemText(xItem.Objects.FindDrawable('txtTimeB')).Text := aMatch.TeamB.Name;
+  TListItemText(xItem.Objects.FindDrawable('txtResultadoTimeA')).Text := aMatch.ResultTeamA.ToString;
+  TListItemText(xItem.Objects.FindDrawable('txtResultadoTimeB')).Text := aMatch.ResultTeamB.ToString;
+end;
+
+end.
